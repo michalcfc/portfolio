@@ -1,4 +1,9 @@
 ---
 label: test
 hide_body: false
-fields: []
+fields:
+- name: dsa
+  type: text
+  config:
+    required: false
+  label: dsa

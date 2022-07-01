@@ -1,48 +1,84 @@
-import { useRouter } from 'next/router'
+import { GetStaticProps } from "next";
 
 import Head from 'next/head'
 import { NextSeo } from 'next-seo';
 import markdownToHtml from '~lib/markdownToHtml';
+
+import { Project } from "~types/Projects";
 
 import {
   getProjectsContentBySlug,
   getDynamicProjectContentBySlug
 } from '../../lib/api'
 
+// utils
+import { COLORS } from "~utils/styles/colors";
+import { SPACING } from "~utils/styles/spacing";
+import { BOX_SHADOWS } from "~utils/styles/boxShadows";
+import { BORDER_RADIUS } from "~utils/styles/borderRadius";
+
 // components
-import Project from "~components/Project";
-import Container from "~components/Container";
+import { Container } from "~components/common/Container";
+import {
+  ProjectDetails ,
+  ProjectDescription
+} from "~components/Projects";
+import { Grid } from "~components/common/Grid";
+import { Box } from "~components/common/Box";
 
 const ProjectPage = ({ project, content }) => {
 
   const {
-    slug,
-    title,
+    name,
+    details,
   } = project
 
-  const router = useRouter()
-  // if (!router.isFallback && !slug) {
-  //   return <ErrorPage statusCode={404} />
-  // }
 
   return <>
     <Container mt={4} mb={4}>
       <>
         <Head>
           <title>
-            {title}
+            {name}
           </title>
           {/*<meta property="og:image" content={post.ogImage.url} />*/}
         </Head>
         <NextSeo
-            title={title}
+            title={name}
             openGraph={{
-              url: slug,
-              title: `${title}`,
+              url: name,
+              title: `${name}`,
             }}
         />
       </>
-      <Project project={project} content={content} />
+      <Grid
+          gridGap={3}
+          gridTemplateColumns={"repeat(12, 1fr)"}
+      >
+        <Box
+            p={SPACING.xl}
+            background={COLORS.white}
+            boxShadow={BOX_SHADOWS.base}
+            borderRadius={BORDER_RADIUS.base}
+            gridColumn={['span 12', 'span 12', 'span 8']}
+        >
+        <ProjectDescription
+          desc={content}
+        />
+        </Box>
+        <Box
+            p={SPACING.xl}
+            background={COLORS.white}
+            boxShadow={BOX_SHADOWS.base}
+            borderRadius={BORDER_RADIUS.base}
+            gridColumn={['span 12', 'span 12', 'span 4']}
+        >
+          <ProjectDetails
+            name={name}
+            details={details}
+          />
+        </Box>
+      </Grid>
     </Container>
   </>
 }
@@ -50,18 +86,19 @@ const ProjectPage = ({ project, content }) => {
 export default ProjectPage
 
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: GetStaticProps<{
+  project: Project
+}>) {
   const { slug } = params;
   const project = getDynamicProjectContentBySlug(slug, [
-    'title',
+    'name',
     'img',
-    'slug',
     'tags',
     'details',
     'stack',
     'content',
   ]);
-  // @ts-ignore
+
   const content = await markdownToHtml(project.content || '');
 
   return {

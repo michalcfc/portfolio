@@ -49,6 +49,14 @@ export function getPostsContentBySlug(fields = []) {
     return posts;
 }
 
+export function getAllProjectsCategory(fields = []) {
+    const result = {};
+    const slugs = getSlugsFromDirectory(projectsDirectory);
+    slugs.forEach(slug => console.log(slug.categories))
+    const categories = slugs.map((slug) => getBySlug(projectsDirectory, slug, fields));
+    return categories
+}
+
 export function getProjectsContentBySlug( fields = []) {
     const slugs = getSlugsFromDirectory(projectsDirectory);
     const projects = slugs.map((slug) => getBySlug(projectsDirectory, slug, fields));

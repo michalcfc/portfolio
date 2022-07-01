@@ -1,46 +1,51 @@
-import { useState } from 'react';
+import { useState } from "react"
+import { AppProps } from "next/app"
 
-import { DefaultSeo } from 'next-seo'
-import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './../themes';
-import { GlobalStyles } from './../shared/styles';
+// seo
+import { seo } from "~lib/seo";
+import { DefaultSeo } from "next-seo"
 
-import Layout from "../layout"
+// layout
+import { Layout } from "./../layout"
+import GlobalStyles from '~styles/globalStyles';
 
-import SEO from './../../next-seo.config'
+// locales
+import { appWithTranslation } from 'next-i18next'
 
-export default function App({ Component, pageProps }) {
+// theme
+import { ThemeProvider } from "styled-components"
+import { lightTheme, darkTheme } from "./../themes"
 
-  const [theme, setTheme] = useState('dark');
-  
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
+// icons
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
+
+    const [theme, setTheme] = useState("light")
+
+    const toggleTheme = () => {
+        if (theme === "light") {
+            setTheme("dark")
+        } else {
+            setTheme("light")
+        }
     }
-  }
 
-  return (
-    <>
-        <DefaultSeo {...SEO} />
+    config.autoAddCss = false;
+
+    return (
         <ThemeProvider
-            theme={
-            theme === 'light'
-            ? lightTheme
-            : darkTheme
-          }
-      >
-      <GlobalStyles />
-        <Layout 
-          toggleTheme={toggleTheme}
-          >
-              <Component 
-                {...pageProps} 
-                />
-        </Layout>
-      </ThemeProvider>
-      
-    </>
-  )
+            theme={theme === "light" ? lightTheme : darkTheme}
+        >
+            <GlobalStyles />
+            <Layout theme={theme} toggleTheme={toggleTheme}>
+                <DefaultSeo {...seo} />
+                <Component {...pageProps} />
+            </Layout>
+        </ThemeProvider>
+    )
 }
+
+
+export default appWithTranslation(MyApp)

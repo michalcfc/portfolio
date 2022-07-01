@@ -1,36 +1,50 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "~*": [
-        "./src/*"
-      ],
-    },
-    "target": "es5",
-    "module": "esnext",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es6",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "strict": true,
+    "allowJs": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "outDir": "build",
+    "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "noEmit": true,
     "moduleResolution": "node",
+    "downlevelIteration": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": false,
+    "baseUrl": "./",
+    "paths": {
+      "@types": [
+        "src/types/*"
+      ],
+      "@*": [
+        "./src/*"
+      ],
+      "~*": [
+        "./src/*",
+        "./src/types"
+      ]
+    },
+    "strict": true,
     "incremental": true
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "./webpack.config.ts"
+  ],
   "exclude": [
     "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
   ]
 }

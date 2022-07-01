@@ -1,0 +1,50 @@
+import { COLORS } from './colors';
+
+export const ALERTS = {
+  size: {
+    default: '.75rem 1rem',
+    link: '0',
+    xs: '0.475rem 0.725rem',
+    sm: '.75rem 1rem',
+    md: '.75rem 1rem',
+    lg: '.75rem 1rem',
+    xl: '.75rem 1rem',
+  },
+  fontSize: {
+    default: '.875rem',
+    xs: '0.75rem',
+    sm: '0.875rem',
+    md: '.875rem',
+    lg: '1.125rem',
+    xl: '1.375rem',
+  },
+  text: {
+    default: `${COLORS.white}`,
+    success: `${COLORS.white}`,
+    ghost: `${COLORS.black}`,
+    outline: `${COLORS.black}`,
+    danger: `${COLORS.red}`,
+    info: `${COLORS.darkBlue}`,
+    link: `${COLORS.brand}`,
+    warning: `${COLORS.red}`,
+  },
+  border: {
+    success: 'transparent',
+    danger: 'transparent',
+    warning: `${COLORS.gray}`,
+    outline: `${COLORS.black}`,
+    default: 'transparent',
+  },
+  background: {
+    success: `${COLORS.brand}`,
+    primary: `${COLORS.brand}`,
+    secondary: `${COLORS.black}`,
+    info: `${COLORS.lightBlue}`,
+    ghost: 'none',
+    danger: `${COLORS.red}`,
+    warning: `${COLORS.gray}`,
+    outline: 'none',
+    link: 'none',
+    default: '',
+  },
+};

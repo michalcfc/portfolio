@@ -1,26 +1,73 @@
-import Jumbotron from "@components/Jumbotron";
-import ProjectsList from "~components/ProjectsList";
-import { getProjectsContentBySlug } from "~lib/api";
+import { ProjectPageD } from "~types/projectPage";
+import { GetStaticProps } from "next";
 
-const Projects = ({ projects }) => {
+import { getAllProjectsCategory } from "~lib/api";
 
-    return <>
-        <Jumbotron
-            title={"Projects"}
-            description={"Create custom landing pages with Omega that converts more visitors than any website."}
+// utils
+import { SIZES}  from "~utils/styles/sizes";
+import { SPACING } from "~utils/styles/spacing";
+import { FONT_SIZES } from "~utils/styles/fontSizes";
+
+// components
+import { Page } from "~components/Page";
+import { Box } from "~components/common/Box";
+import { Text } from "~components/common/Text";
+import { Projects } from "~components/Projects";
+import { Heading } from "~components/common/Heading";
+
+
+const ProjectsPage = ({ projects }: ProjectPageD) => {
+
+
+    return <Page
+        seoTitle={'Projekty'}
+        seoDesc={"Projekty"}
+        canonical={"https://www.icoding.pl/"}
+        op={{
+            url: '/og-image.png',
+            title: 'My portfolio',
+            desc: 'My portfolio',
+            img:  [
+                {
+                    url: "/og-image.png",
+                    width: 800,
+                    height: 420,
+                    alt: "my portfolio",
+                },
+            ]
+        }}
+    >
+        <Box
+            mb={SPACING["2xl"]}
+            display={'flex'}
+            justifyContent={'center'}
+            textAlign={'center'}
+        >
+            <Box maxWidth={SIZES.lg}>
+                <Heading type={'h2'} title={'My Projects'} />
+                <Text
+                    muted
+                    as={'p'}
+                    mt={SPACING.md}
+                    fontSize={FONT_SIZES.lg}
+                    text={'Morbi risus elit, fringilla in cursus a, molestie non dui. ' +
+                    'Nunc accumsan gravida risus, ac semper libero mollis ut.'}
+                />
+            </Box>
+        </Box>
+        <Projects
+            projects={projects}
         />
-        <ProjectsList projects={projects} />
-    </>
+    </Page>
 }
 
-export default Projects
+export default ProjectsPage
 
-export async function getStaticProps() {
-    const projects = getProjectsContentBySlug([
-        'title',
+export const getStaticProps: GetStaticProps = () => {
+    const projects = getAllProjectsCategory([
+        'name',
         'img',
-        'slug',
-        'content',
+        'categories',
     ]);
 
     return {

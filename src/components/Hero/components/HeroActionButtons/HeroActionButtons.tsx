@@ -28,8 +28,8 @@ const HeroActionButtons: React.FC<HeroActionButtonsD> = ({
             size={'lg'}
             type={'button'}
             variant={'outline'}
-            href={secondary_cta.uri}
-            name={secondary_cta.name}
+            href={secondary_cta?.uri}
+            name={secondary_cta?.name}
         />
     </FlexBox>
 )

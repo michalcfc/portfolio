@@ -1,4 +1,4 @@
-import { Cta } from "~types/HomePage";
+import { Cta } from "./../../Hero.d";
 
 export type HeroLeftAsideD = {
     title: string

@@ -15,7 +15,7 @@ const LocaleSwitcher = () => {
                     const { pathname, query, asPath } = router
                     return (
                         <li key={locale}>
-                            <Link href={{ pathname, query }} as={asPath} locale={locale}>
+                            <Link href={{ pathname, query }}  locale={locale}>
                                 <a>{locale}</a>
                             </Link>
                         </li>

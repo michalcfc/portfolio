@@ -14,8 +14,10 @@ import {
     PositionProps,
     SpaceProps,
     FontWeightProps,
-    FontSizeProps, ColorProps,
+    FontSizeProps,
+    ColorProps,
 } from 'styled-system';
+import Link from "next/link";
 
 const buttonSize = variant({
     prop: 'size',
@@ -56,7 +58,7 @@ const buttonStyledSystem = compose(
     buttonStyle
 )
 
-export const LinkStyle = styled.a<LinkProps>`
+export const LinkStyle = styled(Link)<LinkProps>`
   ${linkStyledSystem};
   cursor: pointer;
   line-height: 1.25rem;

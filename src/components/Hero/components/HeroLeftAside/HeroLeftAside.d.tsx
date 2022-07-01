@@ -5,5 +5,5 @@ export type HeroLeftAsideD = {
     subtitle: string
     strap?: string
     primary_cta: Cta
-    secondary_cta: Cta
+    secondary_cta?: Cta
 };

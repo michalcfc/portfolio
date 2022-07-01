@@ -108,6 +108,7 @@ const ContactForm: React.FC<ContactFormD> = () => {
                 name={"Send"}
                 mt={SPACING.md}
                 variant={"success"}
+                onClick={() => {}}
             />
         </form>
     )

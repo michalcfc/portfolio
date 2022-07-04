@@ -1,31 +1,28 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { TabsD } from './Tabs.d';
 
 import {
-    TabIndex, TabPanel,
-    TabsContextInterface,
-} from "~components/common/Tabs/types";
+  TabIndex,
+  TabsContextInterface,
+} from '~components/common/Tabs/types';
 
-export const TabsContext = React.createContext<TabsContextInterface>(null!)
+export const TabsContext = React.createContext<TabsContextInterface>(null!);
 
 const Tabs: React.FC<TabsD> = ({
-    isActiveTab,
-    children,
+  children,
 }) => {
+  const [selectedTab, setSelectedTab] = useState<TabIndex>(null);
 
-    const [currentTab, setCurrentTab] = useState<TabIndex>(0);
+  const values = useMemo(() => ({ selectedTab, setSelectedTab }), [selectedTab]);
 
-    return (
-      <TabsContext.Provider
-        value={{
-            currentTab,
-            setCurrentTab,
-        }}
-      >
-          {children}
-      </TabsContext.Provider>
-    );
-    }
+  return (
+    <TabsContext.Provider
+      value={values}
+    >
+      {children}
+    </TabsContext.Provider>
+  );
+};
 
 export default Tabs;

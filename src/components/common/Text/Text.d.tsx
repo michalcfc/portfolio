@@ -11,7 +11,7 @@ import {
 type CustomProps = {
   as?: any,
   text: string
-  muted?: boolean
+  isMuted?: boolean
 };
 
 export type TextProps = ColorProps &

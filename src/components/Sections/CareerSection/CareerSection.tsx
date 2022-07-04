@@ -1,31 +1,15 @@
-import React from "react"
+import React from 'react';
 
-import { CareerSectionD } from "./CareerSection.d"
-
-// utils
-import { SPACING } from "~utils/styles/spacing";
+import { CareerSectionD } from './CareerSection.d';
 
 // components
-import { Section } from "./../Section";
-import { Box } from "~components/common/Box";
-import { Text } from "~components/common/Text";
-import { Grid } from "~components/common/Grid";
-import { Heading } from "~components/common/Heading";
+import { Section } from '../Section';
 
-
-const CareerSection: React.FC<CareerSectionD> = () => {
-
-
-
-    return (
-        <Section
-            title={'My Career'}
-            subtitle={''}
-        >
-
-
-        </Section>
-    )
-}
+const CareerSection: React.FC<CareerSectionD> = () => (
+  <Section
+    title="My Career"
+    subtitle=""
+  />
+);
 
 export default CareerSection;

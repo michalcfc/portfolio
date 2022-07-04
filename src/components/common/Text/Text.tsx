@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { TextProps } from '@components/Text/Text.d';
+import { TextProps } from './Text.d';
 import { TextStyles } from './Text.styles';
 
 const Text: React.FC<TextProps> = ({
   text,
-  muted,
+  isMuted,
   children,
   ...rest
 }) => (
   <TextStyles
-    muted={muted}
+    isMuted={isMuted}
     {...rest}
   >
     {text || children}

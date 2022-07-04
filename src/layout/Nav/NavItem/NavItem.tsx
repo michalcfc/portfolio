@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NavLink } from '@layout/Nav/Nav.styles';
+import { NavLink } from '~layout/Nav/Nav.styles';
 import { NavItemWrapper } from './NavItem.styles';
 import { NavItemProps } from './NavItem.d';
 

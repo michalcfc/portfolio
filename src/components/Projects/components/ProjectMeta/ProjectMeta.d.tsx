@@ -1,8 +1,6 @@
-import { Categories } from "~components/Projects/types";
-
 export interface ProjectMetaD {
-    stack: string
-    client: string
-    category: string
-    dateRelease: string
+  stack: string
+  client: string
+  category: string
+  dateRelease: string
 }

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": false,
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es6",
     "lib": [
       "esnext",
@@ -25,12 +25,6 @@
     "noEmit": false,
     "baseUrl": "./",
     "paths": {
-      "@types": [
-        "src/types/*"
-      ],
-      "@*": [
-        "./src/*"
-      ],
       "~*": [
         "./src/*",
         "./src/types"

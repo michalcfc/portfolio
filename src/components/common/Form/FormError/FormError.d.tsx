@@ -1,3 +1,3 @@
 export interface FormErrorD {
-    text: string
+  text: string
 }

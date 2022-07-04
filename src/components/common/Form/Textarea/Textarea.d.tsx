@@ -1,4 +1,4 @@
-import { TextareaHTMLAttributes } from "react";
+import { TextareaHTMLAttributes } from 'react';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   SpaceProps,

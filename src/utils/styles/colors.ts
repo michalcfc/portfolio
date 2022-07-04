@@ -1,4 +1,4 @@
-import {darken, lighten} from 'polished';
+import { darken, lighten } from 'polished';
 
 export const COLORS = {
   white: '#fff',
@@ -10,7 +10,7 @@ export const COLORS = {
   green: 'green',
   blue: '#4c89fb',
   lightBlue: '#f1f5ff',
-  darkBlue: "#04297a",
+  darkBlue: '#04297a',
   yellow: '#ffc61b',
   glass: 'hsla(0, 0%, 100%, 0.8)',
   red: '#e11d48',

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from '@components/Link';
+import { Link } from '~components/common/Link';
 
 type NavLinkProps = {
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mapToTheme as theme } from 'styled-map';
 import {
   space,
   compose,
@@ -19,25 +18,25 @@ import {
 
 type CustomProps = {
   isShow?: boolean
-  variant?: "success" | "warning" | "danger" | "info"
+  variant?: 'success' | 'warning' | 'danger' | 'info'
 };
 
 export type IconProps = BackgroundProps &
-    BorderProps &
-    LayoutProps &
-    BoxShadowProps &
-    PositionProps &
-    SpaceProps &
-    CustomProps
+BorderProps &
+LayoutProps &
+BoxShadowProps &
+PositionProps &
+SpaceProps &
+CustomProps;
 
 const iconStyledSystem = compose(
-    background,
-    border,
-    boxShadow,
-    layout,
-    color,
-    position,
-    space,
+  background,
+  border,
+  boxShadow,
+  layout,
+  color,
+  position,
+  space,
 );
 
 export const IconWrapper = styled.div<IconProps>`

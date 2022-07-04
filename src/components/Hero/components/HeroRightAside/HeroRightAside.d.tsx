@@ -1,3 +1,3 @@
 export type HeroRightAsideD = {
- img: string
+  img: string
 };

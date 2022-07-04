@@ -1,6 +1,6 @@
-import { Cta } from "~components/Hero/Hero.d";
+import { Cta } from '~components/Hero/Hero.d';
 
 export type HeroActionButtonsD = {
-    primary_cta: Cta
-    secondary_cta?: Cta
+  primary_cta: Cta
+  secondary_cta?: Cta
 };

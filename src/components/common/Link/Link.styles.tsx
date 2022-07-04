@@ -1,36 +1,35 @@
 import styled, { css, CSSProperties } from 'styled-components';
 import { mapToTheme as theme } from 'styled-map';
-import { ButtonSizes, ButtonVariants} from "~components/common/Button/types";
 
 import {
-    space,
-    color,
-    system,
-    variant,
-    compose,
-    fontSize,
-    fontWeight,
-    buttonStyle,
-    PositionProps,
-    SpaceProps,
-    FontWeightProps,
-    FontSizeProps,
-    ColorProps,
+  space,
+  color,
+  system,
+  variant,
+  compose,
+  fontSize,
+  fontWeight,
+  buttonStyle,
+  PositionProps,
+  SpaceProps,
+  FontWeightProps,
+  FontSizeProps,
+  ColorProps,
 } from 'styled-system';
-import Link from "next/link";
+import Link from 'next/link';
+import { ButtonSizes, ButtonVariants } from '~components/common/Button/types';
 
 const buttonSize = variant({
-    prop: 'size',
-    key: 'buttons.size'
-})
+  prop: 'size',
+  key: 'buttons.size',
+});
 
 type CustomProps = {
-    type?: 'button'
-    size?: ButtonSizes
-    isAbsolute?: boolean
-    variant?: ButtonVariants
+  type?: 'button'
+  size?: ButtonSizes
+  isAbsolute?: boolean
+  variant?: ButtonVariants
 };
-
 
 export type LinkProps =
     PositionProps &
@@ -40,23 +39,23 @@ export type LinkProps =
     FontWeightProps &
     CustomProps &
     Pick<CSSProperties,
-        | 'textDecoration'
-        >
+    | 'textDecoration'
+    >;
 
 const linkStyledSystem = compose(
-    space,
-    color,
-    fontSize,
-    fontWeight,
-    system({
-        textDecoration: true,
-    }),
+  space,
+  color,
+  fontSize,
+  fontWeight,
+  system({
+    textDecoration: true,
+  }),
 );
 
 const buttonStyledSystem = compose(
-    buttonSize,
-    buttonStyle
-)
+  buttonSize,
+  buttonStyle,
+);
 
 export const LinkStyle = styled(Link)<LinkProps>`
   ${linkStyledSystem};
@@ -87,6 +86,6 @@ export const LinkStyle = styled(Link)<LinkProps>`
 `;
 
 LinkStyle.defaultProps = {
-    size: 'sm',
-    variant: 'text'
-}
+  size: 'sm',
+  variant: 'text',
+};

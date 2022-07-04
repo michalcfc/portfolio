@@ -1,5 +1,5 @@
-import { Followers } from "./Hero";
+import { Followers } from './Hero';
 
 export {
-    Followers
-}
+  Followers,
+};

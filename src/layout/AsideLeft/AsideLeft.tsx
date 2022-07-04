@@ -14,12 +14,13 @@ const AsideLeft = ({
   return (
     <>
       {isVisible
-          && <AsideWrapper
+          && (
+          <AsideWrapper
             isFixed={isFixed}
             isMobile={isMobile}
             isVisible={isVisible}
           />
-      }
+          )}
     </>
   );
 };

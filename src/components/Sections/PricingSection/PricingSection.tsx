@@ -1,21 +1,15 @@
-import React from "react"
+import React from 'react';
 
-import { PricingSectionD } from "./ToolSection.d"
+import { PricingSectionD } from './PricingSection.d';
 
 // components
-import { Section } from "./../Section";
+import { Section } from '../Section';
 
-
-const PricingSection: React.FC<PricingSectionD> = () => {
-
-    return (
-        <Section
-            title={'Tools I Use'}
-            subtitle={'Morbi risus elit, fringilla in cursus a, molestie non dui. Nunc accumsan gravida risus, ac semper libero mollis ut.'}
-        >
-
-        </Section>
-    )
-}
+const PricingSection: React.FC<PricingSectionD> = () => (
+  <Section
+    title="Tools I Use"
+    subtitle="Morbi risus elit, fringilla in cursus a, molestie non dui. Nunc accumsan gravida risus, ac semper libero mollis ut."
+  />
+);
 
 export default PricingSection;

@@ -1,28 +1,32 @@
-import {HTMLProps, LinkHTMLAttributes} from 'react';
+import { LinkProps } from 'next/link';
 import {
-  LayoutProps,
   SpaceProps,
-  TypographyProps
+  LayoutProps,
+  PositionProps,
+  TypographyProps,
 } from 'styled-system';
-import { CSSProperties } from "styled-components";
-import { ButtonSizes, ButtonVariants} from "~components/common/Button/types";
-import {LinkProps} from "next/link";
+import { CSSProperties } from 'styled-components';
+import {
+  ButtonSizes,
+  ButtonVariants,
+} from '~components/common/Button/types';
 
 export interface CustomProps {
   size?: ButtonSizes
-  name?: string | undefined
+  name?: string
   type?: 'button'
   isAbsolute?: boolean
   variant?: ButtonVariants
   children?: JSX.Element
 }
 
-export type LinkD = SpaceProps &
+export type LinkD =
     CustomProps &
-    LayoutProps &
+    SpaceProps &
     LinkProps &
+    PositionProps &
     TypographyProps &
-    HTMLProps<HTMLAnchorElement> &
+    LayoutProps &
     Pick<CSSProperties,
-        | 'textDecoration'
-        >
+    | 'textDecoration'
+    >;

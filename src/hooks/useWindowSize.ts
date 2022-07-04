@@ -18,10 +18,10 @@ export const useWindowSize = () => {
 
   function handleWindowSizeChange() {
     if (typeof window !== 'undefined') {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     }
   }
   useEffect(() => {

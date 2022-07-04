@@ -4,7 +4,7 @@ import { StyledComponentPropsWithRef } from 'styled-components';
 
 type CustomProps = {
   as?: any,
-  title?: string
+  title: string
 };
 
 export type HeadingProps<

@@ -1,23 +1,23 @@
 import styled, { CSSProperties } from 'styled-components';
-
 import {
-    space,
-    system,
-    layout,
-    border,
-    flexbox,
-    compose,
-    position,
-    boxShadow,
-    background,
-    GridProps,
-    SpaceProps,
-    LayoutProps,
-    BorderProps,
-    FlexboxProps,
-    PositionProps,
-    BoxShadowProps,
-    BackgroundProps, grid,
+  grid,
+  space,
+  system,
+  layout,
+  border,
+  flexbox,
+  compose,
+  position,
+  boxShadow,
+  background,
+  GridProps,
+  SpaceProps,
+  LayoutProps,
+  BorderProps,
+  FlexboxProps,
+  PositionProps,
+  BoxShadowProps,
+  BackgroundProps,
 } from 'styled-system';
 
 export type BoxProps = BackgroundProps &
@@ -29,14 +29,14 @@ GridProps &
 PositionProps &
 SpaceProps &
 Pick<CSSProperties,
-    | 'gap'
-    | 'textDecoration'
-    | 'textTransform'
-    | 'whiteSpace'
-    | 'textAlign'
-    | 'textOverflow'
-    | 'overflow'
-    > &
+| 'gap'
+| 'textDecoration'
+| 'textTransform'
+| 'whiteSpace'
+| 'textAlign'
+| 'textOverflow'
+| 'overflow'
+> &
 {
   hoverEffect?: boolean
 };
@@ -53,7 +53,7 @@ const boxStyledSystem = compose(
   system({
     gap: {
       property: 'gap',
-      scale: `${space}`
+      scale: `${space}`,
     },
     overflow: true,
     textOverflow: true,

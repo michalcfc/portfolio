@@ -12,8 +12,8 @@ type DataProps = {
 };
 
 const inputStyledSystem = compose(
-    space,
-    layout,
+  space,
+  layout,
 );
 
 export const Label = styled.label`

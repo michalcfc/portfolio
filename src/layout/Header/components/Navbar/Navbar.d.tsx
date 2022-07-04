@@ -1,6 +1,6 @@
-import { Links } from "~layout/Header/types";
+import { Links } from '~layout/Header/types';
 
 export interface NavbarD {
-    links: Links[]
-    isMobile: boolean
+  links: Links[]
+  isMobile: boolean
 }

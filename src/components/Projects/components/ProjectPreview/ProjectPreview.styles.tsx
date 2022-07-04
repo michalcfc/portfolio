@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { ImgWrapper } from "~components/common/Img/Img.styles";
+import styled from 'styled-components';
+import { ImgWrapper } from '~components/common/Img/Img.styles';
 
 type DataProps = {
 
-}
+};
 
 export const Action = styled.div<DataProps>`
   top: 0;
@@ -15,10 +15,10 @@ export const Action = styled.div<DataProps>`
   & > a {
     z-index: 1000;
     &:hover {
-      color: ${({theme}) => theme.colors.red};
+      color: ${({ theme }) => theme.colors.red};
     }
   }
-`
+`;
 
 export const ProjectWrapper = styled.div<DataProps>`
   position: relative;
@@ -45,7 +45,3 @@ export const ProjectWrapper = styled.div<DataProps>`
   }
   }
 `;
-
-
-
-

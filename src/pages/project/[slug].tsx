@@ -1,10 +1,7 @@
-import { GetStaticProps } from "next";
-
 import Head from 'next/head'
 import { NextSeo } from 'next-seo';
 import markdownToHtml from '~lib/markdownToHtml';
-
-import { Project } from "~types/Projects";
+import { ProjectPageD } from "~types/projectPage";
 
 import {
   getProjectsContentBySlug,
@@ -23,14 +20,14 @@ import {
   ProjectDetails ,
   ProjectDescription
 } from "~components/Projects";
-import { Grid } from "~components/common/Grid";
 import { Box } from "~components/common/Box";
+import { Grid } from "~components/common/Grid";
 
-const ProjectPage = ({ project, content }) => {
+const ProjectPage = ({ project }: ProjectPageD) => {
 
   const {
     name,
-    details,
+    description,
   } = project
 
 
@@ -63,7 +60,7 @@ const ProjectPage = ({ project, content }) => {
             gridColumn={['span 12', 'span 12', 'span 8']}
         >
         <ProjectDescription
-          desc={content}
+          desc={description}
         />
         </Box>
         <Box
@@ -75,7 +72,7 @@ const ProjectPage = ({ project, content }) => {
         >
           <ProjectDetails
             name={name}
-            details={details}
+            details={[]}
           />
         </Box>
       </Grid>
@@ -85,25 +82,27 @@ const ProjectPage = ({ project, content }) => {
 
 export default ProjectPage
 
+type Params = {
+  params: {
+    slug: string
+  }
+}
 
-export async function getStaticProps({ params }: GetStaticProps<{
-  project: Project
-}>) {
+export async function getStaticProps({ params }: Params) {
   const { slug } = params;
   const project = getDynamicProjectContentBySlug(slug, [
     'name',
     'img',
     'tags',
-    'details',
     'stack',
-    'content',
+    'description',
   ]);
 
   const content = await markdownToHtml(project.content || '');
 
   return {
     props: {
-      project,
+      ...project,
       content
     }
   };

@@ -5,7 +5,9 @@ export type Project = {
     img: string
     name: string
     slug: string
-    tags: []
+    tags: string[]
+    stack: string[]
+    categories: string[]
     release: string
     description: string
     category: string[]

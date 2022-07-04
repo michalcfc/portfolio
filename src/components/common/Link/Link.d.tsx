@@ -1,8 +1,8 @@
 import { LinkProps } from "next/link";
-import { HTMLProps } from 'react';
 import {
   SpaceProps,
-  TypographyProps
+  TypographyProps,
+  LayoutProps,
 } from 'styled-system';
 import { CSSProperties } from "styled-components";
 import { ButtonSizes, ButtonVariants} from "~components/common/Button/types";
@@ -21,6 +21,7 @@ export type LinkD =
     SpaceProps &
     LinkProps &
     TypographyProps &
+    LayoutProps &
     Pick<CSSProperties,
         | 'textDecoration'
         >

@@ -1,6 +1,6 @@
 import styled, { css, CSSProperties } from 'styled-components';
 import { mapToTheme as theme } from 'styled-map';
-import { ButtonSizes, ButtonVariants} from "~components/common/Button/types";
+import { ButtonSizes, ButtonVariants } from "~components/common/Button/types";
 
 import {
     space,

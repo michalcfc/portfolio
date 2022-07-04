@@ -48,7 +48,11 @@ const ProjectPreview: React.FC<ProjectPreviewD> = ({
                 title={name}
                 mt={SPACING.md}
             />
-            <Link style={{zIndex: 98 }} isAbsolute href={`/project/${getSlugFromTitle(name)}`} />
+            <Link
+                isAbsolute
+                zIndex={98}
+                href={`/project/${getSlugFromTitle(name)}`}
+            />
         </ProjectWrapper>
     )
 

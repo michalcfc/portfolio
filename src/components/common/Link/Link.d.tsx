@@ -1,8 +1,9 @@
 import { LinkProps } from "next/link";
 import {
   SpaceProps,
-  TypographyProps,
   LayoutProps,
+  PositionProps,
+  TypographyProps,
 } from 'styled-system';
 import { CSSProperties } from "styled-components";
 import { ButtonSizes, ButtonVariants} from "~components/common/Button/types";
@@ -20,6 +21,7 @@ export type LinkD =
     CustomProps &
     SpaceProps &
     LinkProps &
+    PositionProps &
     TypographyProps &
     LayoutProps &
     Pick<CSSProperties,

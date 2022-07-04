@@ -13,21 +13,20 @@ import { Button } from "~components/common/Button";
 import { TabsContext } from "~components/common/Tabs/Tabs";
 
 const Tab: React.FC<TabD> = ({
-    id,
     title,
+    onSelect,
+    isSelected,
  }) => {
-
-    const { currentTab, setCurrentTab } = useContext(TabsContext)
 
     return (
         <TabWrapper
-            selectedTab={currentTab === id}
-            onClick={() => setCurrentTab(id)}
+            selectedTab={isSelected}
+            onClick={onSelect}
         >
             <Button
                 name={title}
-                variant={'ghost'}
-                onClick={() => setCurrentTab(id)}
+                variant={'text'}
+                onClick={onSelect}
             />
         </TabWrapper>
     )

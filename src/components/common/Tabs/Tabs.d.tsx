@@ -1,11 +1,8 @@
 export interface TabsD {
-  isActiveTab?: number | null
+  isSelectedTab?: number | null
 }
 
 export type TabsChildrenProps = {
-  id: number
-  isActiveTab?: number
-  currentTab: number | null
-  onChange?: () => void
-  setCurrentTab: (arg: number) => void
+  selectedTab: number | null
+  setSelectedTab: (arg: number) => void
 };

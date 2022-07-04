@@ -1,4 +1,5 @@
-import React, {Fragment, useContext, useEffect} from 'react';
+import React, {Children, cloneElement, ReactNode, useContext} from 'react';
+import { TabsContext } from "@components/common/Tabs/Tabs";
 
 import {
     TabListWrapper
@@ -7,28 +8,28 @@ import {
 import {
   TabListD
 } from './TabList.d';
-import {TabsContext} from "~components/Tabs/Tabs";
-import {AccordionChildrenProps} from "~components/Accordion/AccordionItem/AccordionItem.d";
 
 const TabList: React.FC<TabListD> = ({
     children
  }) => {
 
-  return (
-      <TabListWrapper>
-          {React.Children
-              .map(children, (child: React.ReactElement<TabListD>, index) => (
-                  <Fragment key={index}>
-                      {React.cloneElement(
-                          child,
-                          {
-                              id: index,
-                          },
-                      )}
-                  </Fragment>
-              ))}
-      </TabListWrapper>
-  )
+    const {selectedTab, setSelectedTab} = useContext(TabsContext)
+
+    return (
+    <TabListWrapper>
+        {Children.map<ReactNode, ReactNode>(children, (child, index) => {
+
+            if (React.isValidElement(child)) {
+                return cloneElement(child, {
+                    index: index,
+                    isSelected: selectedTab === index,
+                    onSelect: () => setSelectedTab(index)
+                })
+            }
+
+        })}
+    </TabListWrapper>
+    )
 }
 
 export default TabList;

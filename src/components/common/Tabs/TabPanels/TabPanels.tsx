@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Children, useContext} from 'react';
 
 import {
   TapPanelsWrapper
@@ -7,25 +7,22 @@ import {
 import {
     TabPanelsD
 } from './TabPanels.d';
+import {TabsContext} from "@components/common/Tabs/Tabs";
 
 
 const TabPanels: React.FC<TabPanelsD> = ({
   children,
 }) => {
 
+    const { selectedTab } = useContext(TabsContext)
+
+    const child = Children.toArray(children);
+    const childContent = child
+        .find((child, index) => index === selectedTab)
+
     return (
       <TapPanelsWrapper>
-          {React.Children
-              .map(children, (child: React.ReactElement<TabPanelsD>, index) => (
-                  <Fragment key={index}>
-                      {React.cloneElement(
-                          child,
-                          {
-                              id: index,
-                          },
-                      )}
-                  </Fragment>
-              ))}
+          {childContent}
       </TapPanelsWrapper>
     )
 }

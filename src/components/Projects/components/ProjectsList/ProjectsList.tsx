@@ -44,7 +44,7 @@ const ProjectsList: React.FC<ProjectsListD> = ({
         <Tabs>
             <TabList>
                 <Tab title={'All'} />
-                {categories.map(category => (
+                {categories.map((category) => (
                     <Tab key={category} title={category} />
                 ))}
             </TabList>

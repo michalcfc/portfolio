@@ -93,7 +93,7 @@ export const BUTTONS = {
   },
 
   backgroundHover: {
-    text: lighten(0.1, COLORS.lightGray),
+    default: 'none',
     danger: lighten(0.1, COLORS.red),
     success: lighten(0.1, COLORS.brand),
     primary: lighten(0.1, COLORS.brand),

@@ -18,19 +18,19 @@ const HeroActionButtons: React.FC<HeroActionButtonsD> = ({
     >
         <Link
             mr={3}
-            size={'lg'}
+            size={"lg"}
             type={'button'}
             variant={'success'}
             href={primary_cta.uri}
             name={primary_cta.name}
         />
-        <Link
+        {secondary_cta && <Link
             size={'lg'}
             type={'button'}
             variant={'outline'}
             href={secondary_cta?.uri}
             name={secondary_cta?.name}
-        />
+        />}
     </FlexBox>
 )
 

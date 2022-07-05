@@ -1,16 +1,16 @@
 import { LayoutProps, SpaceProps } from "styled-system";
 import { SelectHTMLAttributes } from "react";
 
-type Options = {
-  id?: number
+type Option = {
+  id: number
   label: string
-  value: string
+  value: number
 }
 
 type CustomProps = {
   label: string
   numberOptionsValue?: number
-  options?: Options[]
+  defaultOptions?: Option[]
 };
 
 export type SelectD =

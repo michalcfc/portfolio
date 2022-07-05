@@ -1,3 +1,4 @@
+import React from "react";
 import { SelectD } from './Select.d'
 import {
   SelectStyle,
@@ -7,23 +8,23 @@ import {
 
 import { OPTIONS_NUMBER_VALUE } from './selectConstants';
 
-const Select = ({
+const Select: React.FC<SelectD> = ({
     label,
-    options,
+    defaultOptions,
     numberOptionsValue,
   ...rest
-}: SelectD) => {
+}) => {
 
-  const data = (numberOptionsValue
-    ? OPTIONS_NUMBER_VALUE
-    : options).map((option) => (
-      <option
-        key={option.id}
-        value={option.value}
-      >
-        {option.label}
-      </option>
-  ));
+    const options = (numberOptionsValue
+        ? OPTIONS_NUMBER_VALUE
+        : defaultOptions ?? []).map((option) => (
+        <option
+            key={option.value}
+            value={option.value}
+        >
+            {option.label}
+        </option>
+    ));
 
   return (
     <SelectWrapper>
@@ -31,7 +32,7 @@ const Select = ({
       <SelectStyle
         {...rest}
       >
-        {data}
+        {options}
       </SelectStyle>
     </SelectWrapper>
   );

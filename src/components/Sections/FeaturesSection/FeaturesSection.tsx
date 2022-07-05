@@ -85,9 +85,7 @@ const FeaturesSection: React.FC<FeaturesSectionD> = () => {
                                 background={COLORS.lightGray}
                                 borderRadius={BORDER_RADIUS.full}
                             >
-                                <Text lineHeight={'1'}>
-                                    <Icon name={faDesktop} size={'2x'} />
-                                </Text>
+                                <Icon lineHeight={1} name={faDesktop} size={'2x'} />
                             </FlexBox>
                         </div>
                         <div>

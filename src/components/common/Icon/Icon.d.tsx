@@ -1,9 +1,8 @@
 import {
   SpaceProps,
   LayoutProps,
+  TypographyProps,
 } from 'styled-system'
-
-import { Colors } from "~utils/styles/types";
 
 import {
   IconDefinition
@@ -18,5 +17,6 @@ export interface CustomProps {
 
 export type IconProps =
     SpaceProps &
+    TypographyProps &
     CustomProps &
     LayoutProps

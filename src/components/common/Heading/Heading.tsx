@@ -3,7 +3,10 @@ import React from 'react';
 import { Text } from '~components/common/Text';
 import { HeadingProps } from './Heading.d';
 import { HeadingType } from '~utils/styles/types';
-import { HEADINGS_STYLES_DESKTOP, HEADINGS_STYLES_MOBILE } from '~utils/styles/headings';
+import {
+  HEADINGS_STYLES_DESKTOP,
+  HEADINGS_STYLES_MOBILE
+} from '~utils/styles/headings';
 
 interface Props {
   type: HeadingType;
@@ -12,7 +15,6 @@ interface Props {
 
 const Heading: React.FC<Props & HeadingProps<HeadingType>> = ({
   title,
-  children,
   type,
   disableMobileStyles,
   ...rest
@@ -26,11 +28,10 @@ const Heading: React.FC<Props & HeadingProps<HeadingType>> = ({
   return (
     <Text
       as={type}
+      text={title}
       {...defaultStyles}
       {...rest}
-    >
-      {title || children}
-    </Text>
+    />
   );
 };
 

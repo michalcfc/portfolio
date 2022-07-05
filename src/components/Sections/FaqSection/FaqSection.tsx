@@ -1,6 +1,6 @@
 import React from "react"
 
-import { AboutSectionD } from "./ServicesSection.d"
+import { FaqSectionD } from "./FaqSection.d"
 
 // utils
 import { SPACING } from "~utils/styles/spacing";
@@ -12,9 +12,7 @@ import { Text } from "~components/common/Text";
 import { Grid } from "~components/common/Grid";
 import { Heading } from "~components/common/Heading";
 
-
-const FaqSection: React.FC<AboutSectionD> = () => {
-
+const FaqSection: React.FC<FaqSectionD> = () => {
 
 
     return (

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { FollowersD } from './Followers.d';
 
 // utils
+import { SIZES } from "~utils/styles/sizes";
 import { COLORS } from "~utils/styles/colors";
 import { SPACING } from "~utils/styles/spacing";
 import { FONT_SIZES } from "~utils/styles/fontSizes";
@@ -13,7 +14,6 @@ import { BORDER_RADIUS } from "~utils/styles/borderRadius";
 // components
 import { Box } from "~components/common/Box";
 import { Text } from "~components/common/Text"
-import {SIZES} from "~utils/styles/sizes";
 
 const Followers: React.FC<FollowersD> = () => (
     <motion.div

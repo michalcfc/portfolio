@@ -1,19 +1,17 @@
 import styled, { CSSProperties } from 'styled-components';
 
 import {
-    space,
-    layout,
-    LayoutProps,
-    compose,
-    BackgroundProps,
-    PositionProps,
-    SpaceProps,
-    border,
-    BorderProps,
-    background,
-    color,
-    position,
-    system,
+  space,
+  layout,
+  LayoutProps,
+  compose,
+  BackgroundProps,
+  PositionProps,
+  SpaceProps,
+  background,
+  color,
+  position,
+  system,
 } from 'styled-system';
 
 export type ImageProps = BackgroundProps &
@@ -22,24 +20,24 @@ PositionProps &
 SpaceProps &
 Pick<CSSProperties, 'transform' | 'transition' | 'objectFit'> &
 {
-    hoverEffect?: boolean
-    borderRadius?: string
-    boxShadow?: string
+  hoverEffect?: boolean
+  borderRadius?: string
+  boxShadow?: string
 };
 
 const imageStyledSystem = compose(
-    background,
-    color,
-    layout,
-    position,
-    space,
-    system({
-        transform: true,
-        transition: true,
-        overflow: true,
-        whiteSpace: true,
-        objectFit: true
-    }),
+  background,
+  color,
+  layout,
+  position,
+  space,
+  system({
+    transform: true,
+    transition: true,
+    overflow: true,
+    whiteSpace: true,
+    objectFit: true,
+  }),
 );
 
 export const ImgWrapper = styled.div<ImageProps>`

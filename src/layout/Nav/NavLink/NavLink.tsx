@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { NavLinkWrapper } from '@layout/Nav/NavLink/NavLink.styles';
 import { NavLinkProps } from './NavLink.d';
+import { NavLinkWrapper } from './NavLink.styles';
 
 const NavLink: React.FC<NavLinkProps> = ({
   name,
@@ -11,9 +11,8 @@ const NavLink: React.FC<NavLinkProps> = ({
   <NavLinkWrapper
     href={href}
     onClick={onClick}
-  >
-    {name}
-  </NavLinkWrapper>
+    name={name}
+  />
 );
 
 export default NavLink;

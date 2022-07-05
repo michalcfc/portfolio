@@ -1,3 +1,1 @@
-export interface TabListD {
-
-}
+export interface TabListD {}

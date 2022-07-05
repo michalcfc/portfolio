@@ -8,6 +8,7 @@ const Link: React.FC<LinkD> = ({
   name,
   type,
   variant,
+  href,
   children,
   isAbsolute,
   ...rest
@@ -15,11 +16,13 @@ const Link: React.FC<LinkD> = ({
   <LinkStyle
     type={type}
     size={size}
+    href={href}
     variant={variant}
     isAbsolute={isAbsolute}
-    {...rest}
   >
-    {name || children}
+    <a {...rest}>
+      {name || children}
+    </a>
   </LinkStyle>
 );
 

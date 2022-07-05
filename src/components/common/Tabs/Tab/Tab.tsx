@@ -1,36 +1,33 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import {
-    TabWrapper
-} from "./Tab.styles";
+  TabWrapper,
+} from './Tab.styles';
 
 import {
-  TabD
+  TabD,
 } from './Tab.d';
 
 // components
-import { Button } from "~components/common/Button";
-import { TabsContext } from "~components/common/Tabs/Tabs";
+import { Button } from '~components/common/Button';
 
 const Tab: React.FC<TabD> = ({
-    id,
-    title,
- }) => {
-
-    const { currentTab, setCurrentTab } = useContext(TabsContext)
-
-    return (
-        <TabWrapper
-            selectedTab={currentTab === id}
-            onClick={() => setCurrentTab(id)}
-        >
-            <Button
-                name={title}
-                variant={'ghost'}
-                onClick={() => setCurrentTab(id)}
-            />
-        </TabWrapper>
-    )
-}
+  title,
+  onSelect,
+  isSelected,
+}) => (
+  <TabWrapper
+    selectedTab={isSelected ?? false}
+    onClick={onSelect}
+  >
+    {onSelect && (
+    <Button
+      name={title}
+      variant="text"
+      onClick={onSelect}
+    />
+    )}
+  </TabWrapper>
+);
 
 export default Tab;

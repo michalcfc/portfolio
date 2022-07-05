@@ -1,40 +1,39 @@
 import styled from 'styled-components';
 import { mapToTheme as theme } from 'styled-map';
+import {
+  color,
+  space,
+  layout,
+  compose,
+  variant,
+  fontSize,
+  position,
+  fontWeight,
+  typography,
+  buttonStyle,
+  borderRadius,
+} from 'styled-system';
 import { ButtonD } from './Button.d';
 
-import {
-    space,
-    layout,
-    compose,
-    variant,
-    fontSize,
-    position,
-    fontWeight,
-    typography,
-    buttonStyle,
-    borderRadius, color,
-} from 'styled-system';
-
-
 const buttonSize = variant({
-    prop: 'size',
-    key: 'buttons.size'
-})
+  prop: 'size',
+  key: 'buttons.size',
+});
 
 const buttonStyledSystem = compose(
-    space,
-    layout,
-    fontSize,
-    fontWeight,
-    color,
-    position,
-    buttonSize,
-    typography,
-    buttonStyle,
-    borderRadius,
+  color,
+  space,
+  layout,
+  fontSize,
+  fontWeight,
+  position,
+  buttonSize,
+  typography,
+  buttonStyle,
+  borderRadius,
 );
 
-export const ButtonWrapper = styled.button<ButtonProps>`       
+export const ButtonWrapper = styled.button<ButtonD>`       
   display: flex;
   cursor: pointer;
   border-width: 0;
@@ -59,7 +58,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
 `;
 
 ButtonWrapper.defaultProps = {
-    size: 'md',
-    variant: "success",
-    textAlign: "center"
+  size: 'md',
+  variant: 'success',
+  textAlign: 'center',
 };

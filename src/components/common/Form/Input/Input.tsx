@@ -1,29 +1,28 @@
 import React from 'react';
 import { InputProps } from './Input.d';
 import {
-    Label,
-    InputStyle,
-    InputWrapper
-} from "./../Form.styles";
+  Label,
+  InputStyle,
+  InputWrapper,
+} from '../Form.styles';
 
 // components
-import { FormError } from "~components/common/Form/FormError";
+import { FormError } from '~components/common/Form/FormError';
 
 const Input: React.FC<InputProps> = ({
-    label,
-    errorText,
-    ...rest
+  label,
+  errorText,
+  ...rest
 }) => (
   <InputWrapper>
     <Label>
-        {label}
+      {label}
     </Label>
     <InputStyle
-    {...rest}
+      {...rest}
     />
     {errorText
-        && <FormError text={errorText} />
-    }
+        && <FormError text={errorText} />}
   </InputWrapper>
 );
 

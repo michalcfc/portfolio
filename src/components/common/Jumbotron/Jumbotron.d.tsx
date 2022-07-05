@@ -1,4 +1,4 @@
 export interface JumbotronD {
-    title: string
-    subtitle?: string
+  title: string
+  subtitle?: string
 }

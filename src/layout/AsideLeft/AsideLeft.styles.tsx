@@ -15,5 +15,5 @@ export const AsideWrapper = styled.aside<DataProps>`
   transform: ${({ isVisible, isMobile }) => ((isVisible || !isMobile)
     ? 'translateX(0rem)'
     : 'translateX(-16rem)')
-  };
+};
 `;

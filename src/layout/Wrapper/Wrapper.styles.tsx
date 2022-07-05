@@ -1,8 +1,8 @@
-import { Views } from "~layout/types";
 import styled, { css } from 'styled-components';
+import { Views } from '~layout/types';
 import breakpoint from '~utils/styles/breakpoints';
 
-const switchTheme = ({ view }: Views) => {
+const switchTheme = (view: Views) => {
   switch (view) {
     case 'fullWidth':
       return css`
@@ -58,6 +58,6 @@ export const WrapperStyles = styled.div<DataProps>`
     "main" 
     "footer";
   @media ${breakpoint.device.lg} {
-    ${switchTheme};
+    ${({ view }) => switchTheme(view)};
   }
 `;

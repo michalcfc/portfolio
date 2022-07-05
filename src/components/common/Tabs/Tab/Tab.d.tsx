@@ -1,4 +1,5 @@
 export interface TabD {
   title: string
-  setCurrentTab?: (arg: number) => void
+  isSelected?: boolean
+  onSelect?: () => void
 }

@@ -1,6 +1,6 @@
-import { Project, ProjectCategory } from "~types/Projects";
+import { Project, ProjectCategory } from '~types/Projects';
 
 export interface ProjectsListD {
-    projects: Project[]
-    categories: ProjectCategory[]
+  projects: Project[]
+  categories: ProjectCategory[]
 }

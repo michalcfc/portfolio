@@ -8,10 +8,10 @@ import { IconProps } from './Icon.d';
 type Props = IconProps & SpaceProps;
 
 const Icon: React.FC<Props> = ({
-    name,
-    size,
-    color,
-    ...rest
+  name,
+  size,
+  color,
+  ...rest
 }) => (
   <IconWrapper {...rest}>
     <FontAwesomeIcon

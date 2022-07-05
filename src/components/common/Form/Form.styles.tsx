@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Label = styled.label`
   text-transform: capitalize;
@@ -29,15 +29,15 @@ export const commonStyle = css`
   &:focus {
     outline: 0;
   }
-`
+`;
 
 export const SelectStyle = styled.select<DataProps>`
   ${commonStyle}
-`
+`;
 export const TextareaStyle = styled.textarea<DataProps>`
     height: 150px;
     ${commonStyle}
-`
+`;
 
 export const InputStyle = styled.input<DataProps>`
   ${commonStyle}

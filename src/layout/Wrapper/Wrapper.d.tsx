@@ -1,4 +1,4 @@
-import { Views } from "~layout/types";
+import { Views } from '~layout/types';
 
 export interface WrapperProps {
   view: Views

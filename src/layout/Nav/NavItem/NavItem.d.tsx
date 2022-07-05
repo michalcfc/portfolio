@@ -6,5 +6,5 @@ export interface NavItemProps {
   component?: JSX.Element
   isHorizontal: boolean
   icon: IconDefinition
-  setOpen?: (arg: boolean) => void
+  setOpen: (arg: boolean) => void
 }

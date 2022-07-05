@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from '@components/Link';
-import breakpoint from '~utils/styles/breakpoints';
-
 import { space, SpaceProps } from 'styled-system';
+import { Link } from '~components/common/Link';
+import breakpoint from '~utils/styles/breakpoints';
 
 type NavbarProps = {
   currentPage?: boolean

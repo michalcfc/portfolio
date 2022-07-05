@@ -1,6 +1,6 @@
-import { Links } from "~layout/Header/types";
+import { Links } from '~layout/Header/types';
 
 export interface MenuListProps {
-    depthLevel: number
-    links: Links[]
+  depthLevel: number
+  links: Links[]
 }

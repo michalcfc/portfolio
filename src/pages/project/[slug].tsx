@@ -1,102 +1,101 @@
-import { GetStaticProps } from "next";
-
-import Head from 'next/head'
+import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import markdownToHtml from '~lib/markdownToHtml';
-
-import { Project } from "~types/Projects";
+import { ProjectPageD } from '~types/projectPage';
 
 import {
   getProjectsContentBySlug,
-  getDynamicProjectContentBySlug
-} from '../../lib/api'
+  getDynamicProjectContentBySlug,
+} from '../../lib/api';
 
 // utils
-import { COLORS } from "~utils/styles/colors";
-import { SPACING } from "~utils/styles/spacing";
-import { BOX_SHADOWS } from "~utils/styles/boxShadows";
-import { BORDER_RADIUS } from "~utils/styles/borderRadius";
+import { COLORS } from '~utils/styles/colors';
+import { SPACING } from '~utils/styles/spacing';
+import { BOX_SHADOWS } from '~utils/styles/boxShadows';
+import { BORDER_RADIUS } from '~utils/styles/borderRadius';
 
 // components
-import { Container } from "~components/common/Container";
+import { Container } from '~components/common/Container';
 import {
-  ProjectDetails ,
-  ProjectDescription
-} from "~components/Projects";
-import { Grid } from "~components/common/Grid";
-import { Box } from "~components/common/Box";
+  ProjectDetails,
+  ProjectDescription,
+} from '~components/Projects';
+import { Box } from '~components/common/Box';
+import { Grid } from '~components/common/Grid';
 
-const ProjectPage = ({ project, content }) => {
-
+const ProjectPage = ({ project }: ProjectPageD) => {
   const {
     name,
-    details,
-  } = project
+    description,
+  } = project;
 
-
-  return <>
-    <Container mt={4} mb={4}>
-      <>
-        <Head>
-          <title>
-            {name}
-          </title>
-          {/*<meta property="og:image" content={post.ogImage.url} />*/}
-        </Head>
-        <NextSeo
+  return (
+    <>
+      <Container mt={4} mb={4}>
+        <>
+          <Head>
+            <title>
+              {name}
+            </title>
+            {/* <meta property="og:image" content={post.ogImage.url} /> */}
+          </Head>
+          <NextSeo
             title={name}
             openGraph={{
               url: name,
               title: `${name}`,
             }}
-        />
-      </>
-      <Grid
+          />
+        </>
+        <Grid
           gridGap={3}
-          gridTemplateColumns={"repeat(12, 1fr)"}
-      >
-        <Box
+          gridTemplateColumns="repeat(12, 1fr)"
+        >
+          <Box
             p={SPACING.xl}
             background={COLORS.white}
             boxShadow={BOX_SHADOWS.base}
             borderRadius={BORDER_RADIUS.base}
             gridColumn={['span 12', 'span 12', 'span 8']}
-        >
-        <ProjectDescription
-          desc={content}
-        />
-        </Box>
-        <Box
+          >
+            <ProjectDescription
+              desc={description}
+            />
+          </Box>
+          <Box
             p={SPACING.xl}
             background={COLORS.white}
             boxShadow={BOX_SHADOWS.base}
             borderRadius={BORDER_RADIUS.base}
             gridColumn={['span 12', 'span 12', 'span 4']}
-        >
-          <ProjectDetails
-            name={name}
-            details={details}
-          />
-        </Box>
-      </Grid>
-    </Container>
-  </>
-}
+          >
+            <ProjectDetails
+              name={name}
+              details={[]}
+            />
+          </Box>
+        </Grid>
+      </Container>
+    </>
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;
 
+type Params = {
+  params: {
+    slug: string
+  }
+};
 
-export async function getStaticProps({ params }: GetStaticProps<{
-  project: Project
-}>) {
+export async function getStaticProps({ params }: Params) {
   const { slug } = params;
   const project = getDynamicProjectContentBySlug(slug, [
     'name',
     'img',
     'tags',
-    'details',
     'stack',
-    'content',
+    'description',
   ]);
 
   const content = await markdownToHtml(project.content || '');
@@ -104,8 +103,8 @@ export async function getStaticProps({ params }: GetStaticProps<{
   return {
     props: {
       project,
-      content
-    }
+      content,
+    },
   };
 }
 

@@ -1,5 +1,5 @@
-import { Project } from "~types/Projects";
+import { Project } from '~types/Projects';
 
 export interface ProjectsD {
-    projects: Project[]
+  projects: Project[]
 }

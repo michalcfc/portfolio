@@ -1,6 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
-import { IconPosition, ButtonSizes, ButtonVariants } from "./types";
-import { SizeProp } from "@fortawesome/fontawesome-svg-core";
+import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   SpaceProps,
@@ -11,16 +10,17 @@ import {
   BorderProps,
   PositionProps,
 } from 'styled-system';
+import { IconPosition, ButtonSizes, ButtonVariants } from './types';
 
 type IconSettings = {
   size?: SizeProp
   name: IconDefinition,
   position: IconPosition
-}
+};
 
 type Settings = {
   icon: IconSettings
-}
+};
 
 type CustomProps = {
   color?: string
@@ -42,4 +42,4 @@ export type ButtonD =
     ColorProps &
     PositionProps &
     TypographyProps &
-    ButtonHTMLAttributes<HTMLButtonElement>
+    ButtonHTMLAttributes<HTMLButtonElement>;

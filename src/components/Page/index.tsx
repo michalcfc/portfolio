@@ -1,7 +1,7 @@
-import { PageContent } from "./PageContent";
-import { default as Page } from "./Page"
+import { PageContent } from './PageContent';
+import Page from './Page';
 
 export {
-    Page,
-    PageContent
-}
+  Page,
+  PageContent,
+};

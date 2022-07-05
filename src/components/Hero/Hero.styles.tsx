@@ -14,5 +14,5 @@ export const HeroContent = styled.div<HeroProps>`
   grid-gap: 2rem;
   align-items: center;
   grid-template-columns: repeat(12,minmax(0,1fr));
-  padding: ${({ theme }) => '8rem 0'}
+  padding: 8rem 0
 `;

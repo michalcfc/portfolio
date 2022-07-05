@@ -1,9 +1,9 @@
-import { Cta } from "./../../Hero.d";
+import { Cta } from '../../Hero.d';
 
 export type HeroLeftAsideD = {
-    title: string
-    subtitle: string
-    strap?: string
-    primary_cta: Cta
-    secondary_cta?: Cta
+  title: string
+  subtitle: string
+  strap?: string
+  primary_cta: Cta
+  secondary_cta?: Cta
 };

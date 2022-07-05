@@ -1,27 +1,29 @@
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import NextDocument, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
 
-type Props = {}
+type Props = {};
 
 class Document extends NextDocument<Props> {
-    render() {
-        return (
-            <Html>
-                <Head>
-                    <link rel="manifest" href="/manifest.json" />
-                    <link rel="apple-touch-icon" href="/icon.png"></link>
-                    <meta name="theme-color" content="#fff" />
-                    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link rel="preconnect" href="https://fonts.gstatic.com"  />
-                    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link rel="preconnect" href="https://fonts.gstatic.com" />
-                </Head>
-                <body>
-                <Main />
-                <NextScript />
-                </body>
-            </Html>
-        )
-    }
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/icon.png" />
+          <meta name="theme-color" content="#fff" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
 
-export default Document
+export default Document;

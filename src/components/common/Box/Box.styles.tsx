@@ -1,5 +1,4 @@
 import styled, { CSSProperties } from 'styled-components';
-
 import {
   grid,
   space,

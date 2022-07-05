@@ -15,6 +15,7 @@ import { Heading } from "~components/common/Heading";
 const FaqSection: React.FC<FaqSectionD> = () => {
 
 
+
     return (
         <Section
             title={'About us'}

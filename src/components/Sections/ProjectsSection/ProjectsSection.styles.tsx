@@ -15,7 +15,7 @@ export const FeatureItem = styled.div<DataProps>`
   display: grid;
   place-items: center;
   border-radius: 40px;
-  box-shadow: ${({ theme }) => theme.boxShadow};
+  box-shadow: ${({ theme }) => theme.boxShadows.base};
 `
 
 

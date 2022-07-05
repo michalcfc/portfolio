@@ -1,5 +1,4 @@
 import type { DefaultSeoProps } from 'next-seo';
-import { createOgImage } from '~lib/og';
 
 const title = 'Michal Jachimowski';
 const description = 'Welcome to my virtual world.';

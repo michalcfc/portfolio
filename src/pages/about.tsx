@@ -1,4 +1,3 @@
-import { Jumbotron } from '~components/common/Jumbotron';
 import { Page } from '~components/Page';
 
 const About = () => (
@@ -25,7 +24,8 @@ const About = () => (
     <p>
       I enjoy building beautiful, user-friendly websites and web applications.
       Look through some of my work and experiences!
-      If you like what you see and have a project you need to be coded, don't hesitate to contact me.
+      If you like what you see and have a project you need to be coded,
+      don`t hesitate to contact me.
     </p>
   </Page>
 );

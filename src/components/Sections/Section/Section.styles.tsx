@@ -2,15 +2,12 @@ import styled from 'styled-components';
 
 import {
   space,
-  color,
-  system,
   layout,
   border,
   compose,
   boxShadow,
   background,
   SpaceProps,
-  ColorProps,
   LayoutProps,
   BorderProps,
   BoxShadowProps,

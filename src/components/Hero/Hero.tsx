@@ -27,6 +27,7 @@ const Hero: React.FC<HeroD> = ({
           title={title}
           subtitle={subtitle}
           primary_cta={primary_cta}
+          secondary_cta={secondary_cta ?? undefined}
         />
         {img
                          && (

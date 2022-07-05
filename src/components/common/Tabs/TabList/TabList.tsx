@@ -26,6 +26,7 @@ const TabList: React.FC<TabListD> = ({
             onSelect: () => setSelectedTab(index),
           });
         }
+        return null;
       })}
     </TabListWrapper>
   );

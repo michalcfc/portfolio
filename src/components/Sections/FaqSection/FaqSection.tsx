@@ -7,7 +7,6 @@ import { SPACING } from '~utils/styles/spacing';
 
 // components
 import { Section } from '../Section';
-import { Box } from '~components/common/Box';
 import { Text } from '~components/common/Text';
 import { Grid } from '~components/common/Grid';
 import { Heading } from '~components/common/Heading';

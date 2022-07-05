@@ -19,11 +19,6 @@ export const getUniqueProjects = (projects: Project[]) => {
   return uniqueProjects;
 };
 
-export const getProjectsByCategory = (categories: ProjectCategory[], project: Project) => {
-  const projects = setProjectsList(categories, project);
-  return projects;
-};
-
 export const setProjectsList = (categories: ProjectCategory[], project: ProjectCategory | any) => {
   const projects: Project[] = [];
 
@@ -40,4 +35,9 @@ export const setProjectsList = (categories: ProjectCategory[], project: ProjectC
   }
 
   return getUniqueProjects(projects);
+};
+
+export const getProjectsByCategory = (categories: ProjectCategory[], project: Project) => {
+  const projects = setProjectsList(categories, project);
+  return projects;
 };

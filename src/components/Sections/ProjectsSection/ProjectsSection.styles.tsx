@@ -1,9 +1,6 @@
 import styled from 'styled-components';
-import { mapToTheme as theme } from 'styled-map';
 
-type DataProps = {
-
-};
+type DataProps = {};
 
 export const FeatureWrapper = styled.div<DataProps>`
   padding: 6rem 0;

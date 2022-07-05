@@ -8,8 +8,6 @@ import {
   BackgroundProps,
   PositionProps,
   SpaceProps,
-  border,
-  BorderProps,
   background,
   color,
   position,

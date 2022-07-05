@@ -1,5 +1,1 @@
-import React from 'react';
-
-export interface TabListD {
-
-}
+export interface TabListD {}

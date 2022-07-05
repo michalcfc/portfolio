@@ -16,14 +16,14 @@ const ProjectActions: React.FC<ProjectActionsD> = ({
       type="button"
       variant="success"
       name="Live preview"
-      href=""
+      href="/"
     />
     <Link
       width="100%"
       type="button"
       variant="danger"
       name="Source code"
-      href=""
+      href="/"
     />
   </Box>
 );

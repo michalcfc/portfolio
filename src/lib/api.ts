@@ -59,7 +59,6 @@ export function getProjectsContentBySlug(fields: string[] = []) {
 }
 
 export function getPostByCategory(fields: string[] = ['Web Design']) {
-  const result = {};
   const slugs = getSlugsFromDirectory(postsDirectory);
   const categories = slugs.map((slug) => getBySlug(postsDirectory, slug, fields));
   return categories;
@@ -79,7 +78,7 @@ export function getAllPostsTags(fields: string[] = ['tags']) {
   const slugs = getSlugsFromDirectory(postsDirectory);
   const tags = slugs.map((slug) => getBySlug(postsDirectory, slug, fields));
   const flatArrays = tags.map((a) => (a.tags)).flat();
-  flatArrays.forEach((x, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
+  flatArrays.forEach((_, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
   return result;
 }
 

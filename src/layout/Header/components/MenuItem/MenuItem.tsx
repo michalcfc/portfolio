@@ -15,12 +15,11 @@ const MenuItem: React.FC<MenuItemProps> = ({
 }) => (
         <MenuItemWrapper>
             <Link
-                type={type}
                 href={url}
+                name={name}
+                type={type}
                 onMouseEnter={() => onHover()}
-            >
-                {name}
-            </Link>
+            />
             {children}
         </MenuItemWrapper>
     )

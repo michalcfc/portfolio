@@ -6,7 +6,10 @@ import {
   TypographyProps,
 } from 'styled-system';
 import { CSSProperties } from 'styled-components';
-import { ButtonSizes, ButtonVariants } from '~components/common/Button/types';
+import {
+  ButtonSizes,
+  ButtonVariants,
+} from '~components/common/Button/types';
 
 export interface CustomProps {
   size?: ButtonSizes

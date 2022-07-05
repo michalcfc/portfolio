@@ -1,8 +1,3 @@
 export interface TabsD {
-  isSelectedTab?: number | null
+  isSelectedTab: number
 }
-
-export type TabsChildrenProps = {
-  selectedTab: number | null
-  setSelectedTab: (arg: number) => void
-};

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import {
     TabWrapper
@@ -10,7 +10,6 @@ import {
 
 // components
 import { Button } from "~components/common/Button";
-import { TabsContext } from "~components/common/Tabs/Tabs";
 
 const Tab: React.FC<TabD> = ({
     title,

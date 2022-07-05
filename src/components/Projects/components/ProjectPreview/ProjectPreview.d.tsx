@@ -1,4 +1,4 @@
 export interface ProjectPreviewD {
-    img: string
-    name: string
+  img: string
+  name: string
 }

@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 
 import {
-    space,
-    color,
-    system,
-    layout,
-    border,
-    compose,
-    boxShadow,
-    background,
-    SpaceProps,
-    ColorProps,
-    LayoutProps,
-    BorderProps,
-    BoxShadowProps,
-    BackgroundProps,
+  space,
+  color,
+  system,
+  layout,
+  border,
+  compose,
+  boxShadow,
+  background,
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  BorderProps,
+  BoxShadowProps,
+  BackgroundProps,
 } from 'styled-system';
 
 export type BoxProps = BackgroundProps &
-    BorderProps &
-    BoxShadowProps &
-    LayoutProps &
-    SpaceProps
+BorderProps &
+BoxShadowProps &
+LayoutProps &
+SpaceProps;
 
 const sectionStyledSystem = compose(
   space,

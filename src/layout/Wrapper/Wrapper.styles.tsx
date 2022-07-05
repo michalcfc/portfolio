@@ -1,5 +1,5 @@
-import { Views } from "~layout/types";
 import styled, { css } from 'styled-components';
+import { Views } from '~layout/types';
 import breakpoint from '~utils/styles/breakpoints';
 
 const switchTheme = (view: Views) => {

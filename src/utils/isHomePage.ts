@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 export function isHomePage() {
-    const router = useRouter()
-    const isHomePage = router.pathname == '/'
-    return isHomePage
+  const router = useRouter();
+  const isHomePage = router.pathname == '/';
+  return isHomePage;
 }

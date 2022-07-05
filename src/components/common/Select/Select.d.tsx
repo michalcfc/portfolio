@@ -1,11 +1,11 @@
-import { LayoutProps, SpaceProps } from "styled-system";
-import { SelectHTMLAttributes } from "react";
+import { LayoutProps, SpaceProps } from 'styled-system';
+import { SelectHTMLAttributes } from 'react';
 
 type Option = {
   id: number
   label: string
   value: number
-}
+};
 
 type CustomProps = {
   label: string

@@ -1,21 +1,15 @@
-import React from "react"
+import React from 'react';
 
-import { ContactSectionD } from "./ContactSection.d"
+import { ContactSectionD } from './ContactSection.d';
 
 // components
-import { Section } from "./../Section";
+import { Section } from '../Section';
 
-
-const ContactSection: React.FC<ContactSectionD> = () => {
-
-    return (
-        <Section
-            title={'Contact'}
-            subtitle={'Lets build something awesome together.'}
-        >
-
-        </Section>
-    )
-}
+const ContactSection: React.FC<ContactSectionD> = () => (
+  <Section
+    title="Contact"
+    subtitle="Lets build something awesome together."
+  />
+);
 
 export default ContactSection;

@@ -1,10 +1,10 @@
 export type IconPosition =
     | 'left'
     | 'center'
-    | 'right'
+    | 'right';
 
 export type ButtonVariants =
-    | "icon"
+    | 'icon'
     | 'success'
     | 'primary'
     | 'secondary'
@@ -13,7 +13,7 @@ export type ButtonVariants =
     | 'ghost'
     | 'white'
     | 'link'
-    | 'text'
+    | 'text';
 
 export type ButtonSizes =
     | 'link'
@@ -22,4 +22,4 @@ export type ButtonSizes =
     | 'md'
     | 'lg'
     | 'xl'
-    | '2xl'
+    | '2xl';

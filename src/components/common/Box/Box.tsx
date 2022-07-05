@@ -7,18 +7,17 @@ const Box: React.FC<BoxProps> = ({
   children,
   ...rest
 }) => {
-
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null);
 
   return (
     <BoxWrapper
-        ref={ref}
+      ref={ref}
       hoverEffect={hoverEffect}
       {...rest}
     >
       {children}
     </BoxWrapper>
-  )
-}
+  );
+};
 
 export default Box;

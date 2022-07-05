@@ -26,23 +26,23 @@ export type Colors =
     | 'darkGray'
     | 'lightGray'
     | 'black'
-    | 'gradient'
+    | 'gradient';
 
 export type Sizes =
     | 'max-content'
     | 'min-content'
-    | "full"
-    | "3xs"
-    | "2xs"
-    | "xs"
-    | "sm"
-    | "md"
-    | "lg"
-    | "xl"
-    | "2xl"
-    | "3xl"
-    | "4xl"
-    | "5xl"
-    | "6xl"
-    | "7xl"
-    | "8xl"
+    | 'full'
+    | '3xs'
+    | '2xs'
+    | 'xs'
+    | 'sm'
+    | 'md'
+    | 'lg'
+    | 'xl'
+    | '2xl'
+    | '3xl'
+    | '4xl'
+    | '5xl'
+    | '6xl'
+    | '7xl'
+    | '8xl';

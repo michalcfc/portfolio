@@ -1,7 +1,7 @@
 import { lighten } from 'polished';
 import { COLORS } from './colors';
-import { SPACING } from "~utils/styles/spacing";
-import { FONT_SIZES } from "~utils/styles/fontSizes";
+import { SPACING } from '~utils/styles/spacing';
+import { FONT_SIZES } from '~utils/styles/fontSizes';
 
 export const BUTTONS = {
 
@@ -9,39 +9,39 @@ export const BUTTONS = {
     default: {
       height: '2.5rem',
       fontSize: FONT_SIZES.sm,
-      padding: `0 ${SPACING.lg}`
+      padding: `0 ${SPACING.lg}`,
     },
     xs: {
       height: '2.5rem',
       fontSize: FONT_SIZES.xs,
-      padding: `0 ${SPACING.md}`
+      padding: `0 ${SPACING.md}`,
     },
     sm: {
       height: '2.5rem',
       fontSize: FONT_SIZES.xs,
-      padding: `0 ${SPACING.md}`
+      padding: `0 ${SPACING.md}`,
     },
     md: {
       height: '2.5rem',
       fontSize: FONT_SIZES.sm,
-      padding: `0 ${SPACING.md}`
+      padding: `0 ${SPACING.md}`,
 
     },
     lg: {
       height: '3.475rem',
       fontSize: FONT_SIZES.md,
-      padding: `0 ${SPACING.xl}`
-    }
+      padding: `0 ${SPACING.xl}`,
+    },
   },
 
   primary: {
     color: COLORS.white,
-    background: COLORS.brand
+    background: COLORS.brand,
   },
 
   secondary: {
     color: COLORS.white,
-    background: COLORS.black
+    background: COLORS.black,
   },
 
   success: {
@@ -57,7 +57,7 @@ export const BUTTONS = {
   outline: {
     color: COLORS.black,
     background: 'transparent',
-    border: `1px solid ${COLORS.black}`
+    border: `1px solid ${COLORS.black}`,
   },
 
   ghost: {

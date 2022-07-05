@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 type DataProps = {
-}
+};
 
 export const MenuItemWrapper = styled.li<DataProps>`
   position: relative;
@@ -24,7 +24,7 @@ export const MenuItemWrapper = styled.li<DataProps>`
     bottom: -8px;
     transition: 0.5s;
     position: absolute;
-    background:${({ theme }) => theme.colors.gradient };
+    background:${({ theme }) => theme.colors.gradient};
   };
   &:before {
     left: 0;
@@ -33,6 +33,6 @@ export const MenuItemWrapper = styled.li<DataProps>`
   &:after {
     right: 0;
     transition: width 0.5s ease-in-out;
-    background:${({ theme }) => theme.colors.gradient };
+    background:${({ theme }) => theme.colors.gradient};
   }
 `;

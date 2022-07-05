@@ -43,10 +43,10 @@ const boxStyledSystem = compose(
   position,
   space,
   system({
-      gap: {
-          property: 'gap',
-          scale: `${space}`
-      },
+    gap: {
+      property: 'gap',
+      scale: `${space}`,
+    },
     textAlign: true,
     transform: true,
     transition: true,

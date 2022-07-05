@@ -2,15 +2,15 @@ import {
   ImgHTMLAttributes,
 } from 'react';
 
-import { ImageProps } from "next/image";
-import { CSSProperties } from "styled-components";
+import { ImageProps } from 'next/image';
+import { CSSProperties } from 'styled-components';
 
 import {
   LayoutProps,
   PositionProps,
   SpaceProps,
   BorderProps,
-  BackgroundProps
+  BackgroundProps,
 } from 'styled-system';
 
 type CustomProps = {

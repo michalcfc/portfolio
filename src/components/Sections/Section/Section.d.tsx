@@ -1,15 +1,15 @@
 import {
-    BackgroundProps,
-    BorderProps,
-    BoxShadowProps,
-    LayoutProps,
-    SpaceProps,
+  BackgroundProps,
+  BorderProps,
+  BoxShadowProps,
+  LayoutProps,
+  SpaceProps,
 } from 'styled-system';
 
 type CustomProps = {
-    title?: string
-    subtitle?: string
-}
+  title?: string
+  subtitle?: string
+};
 
 export type SectionD =
     SpaceProps &
@@ -17,4 +17,4 @@ export type SectionD =
     BackgroundProps &
     BorderProps &
     BoxShadowProps &
-    CustomProps
+    CustomProps;

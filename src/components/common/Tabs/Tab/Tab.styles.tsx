@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 type DataProps = {
-    selectedTab: boolean
+  selectedTab: boolean
 };
 
 export const TabWrapper = styled.li<DataProps>`

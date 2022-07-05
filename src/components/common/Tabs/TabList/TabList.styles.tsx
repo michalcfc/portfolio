@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {SPACING} from "~utils/styles/spacing";
+import { SPACING } from '~utils/styles/spacing';
 
 type DataProps = {
 

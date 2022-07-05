@@ -1,13 +1,12 @@
-import Jumbotron from "@components/Jumbotron";
+import Jumbotron from '@components/Jumbotron';
 
-const Tags = () => {
+const Tags = () => (
+  <>
+    <Jumbotron
+      title="Tags"
+      description=""
+    />
+  </>
+);
 
-    return <>
-        <Jumbotron
-            title={"Tags"}
-            description={""}
-        />
-    </>
-}
-
-export default Tags
+export default Tags;

@@ -4,27 +4,27 @@ export const BADGES = {
   size: {
     default: {
       fontSize: '.675rem',
-      padding: '.75rem 1rem'
+      padding: '.75rem 1rem',
     },
     xs: {
       fontSize: '.735rem',
-      padding: '0.475rem 0.725rem'
+      padding: '0.475rem 0.725rem',
     },
     sm: {
       fontSize: '.735rem',
-      padding: '0.475rem 0.725rem'
+      padding: '0.475rem 0.725rem',
     },
     md: {
       fontSize: '.735rem',
-      padding: '0.475rem 0.725rem'
+      padding: '0.475rem 0.725rem',
     },
     lg: {
       fontSize: '.735rem',
-      padding: '0.475rem 0.725rem'
+      padding: '0.475rem 0.725rem',
     },
     xl: {
       fontSize: '.735rem',
-      padding: '0.475rem 0.725rem'
+      padding: '0.475rem 0.725rem',
     },
   },
 

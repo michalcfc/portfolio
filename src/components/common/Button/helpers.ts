@@ -1,13 +1,7 @@
-import { IconPosition } from "./types";
+import { IconPosition } from './types';
 
-export const isCenterIcon = (iconPosition: IconPosition) => {
-    return ['center'].includes(iconPosition)
-}
+export const isCenterIcon = (iconPosition: IconPosition) => ['center'].includes(iconPosition);
 
-export const isLeftIcon = (iconPosition: IconPosition) => {
-    return ['left'].includes(iconPosition)
-}
+export const isLeftIcon = (iconPosition: IconPosition) => ['left'].includes(iconPosition);
 
-export const isRightIcon = (iconPosition: IconPosition) => {
-    return ['right'].includes(iconPosition)
-}
+export const isRightIcon = (iconPosition: IconPosition) => ['right'].includes(iconPosition);

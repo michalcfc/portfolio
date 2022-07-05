@@ -2,12 +2,12 @@ import {
   SpaceProps,
   LayoutProps,
   TypographyProps,
-} from 'styled-system'
+} from 'styled-system';
 
 import {
-  IconDefinition
-} from "@fortawesome/fontawesome-common-types";
-import { SizeProp } from "@fortawesome/fontawesome-svg-core";
+  IconDefinition,
+} from '@fortawesome/fontawesome-common-types';
+import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface CustomProps {
   name: IconDefinition
@@ -19,4 +19,4 @@ export type IconProps =
     SpaceProps &
     TypographyProps &
     CustomProps &
-    LayoutProps
+    LayoutProps;

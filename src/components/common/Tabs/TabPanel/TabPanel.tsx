@@ -1,20 +1,19 @@
 import React from 'react';
 
 import {
-  TapPanelWrapper
-} from "./TabPanel.styles";
+  TapPanelWrapper,
+} from './TabPanel.styles';
 
 import {
-  TabPanelD
+  TabPanelD,
 } from './TabPanel.d';
-
 
 const TabPanel: React.FC<TabPanelD> = ({
   children,
 }) => (
-      <TapPanelWrapper>
-        {children}
-      </TapPanelWrapper>
-    )
+  <TapPanelWrapper>
+    {children}
+  </TapPanelWrapper>
+);
 
 export default TabPanel;

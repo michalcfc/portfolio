@@ -5,7 +5,7 @@ import { HeadingProps } from './Heading.d';
 import { HeadingType } from '~utils/styles/types';
 import {
   HEADINGS_STYLES_DESKTOP,
-  HEADINGS_STYLES_MOBILE
+  HEADINGS_STYLES_MOBILE,
 } from '~utils/styles/headings';
 
 interface Props {

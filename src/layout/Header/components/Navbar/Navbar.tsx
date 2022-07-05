@@ -1,26 +1,21 @@
-import React from "react";
-import { NavbarD } from "./Navbar.d"
+import React from 'react';
+import { NavbarD } from './Navbar.d';
 
 import {
-    NavbarWrapper
-} from "./Navbar.styles"
+  NavbarWrapper,
+} from './Navbar.styles';
 
-import { MenuList } from "./../MenuList";
-import { MobileMenu } from "~layout/Header/components/MobileMenu";
-
+import { MenuList } from '../MenuList';
+import { MobileMenu } from '~layout/Header/components/MobileMenu';
 
 const Navbar: React.FC<NavbarD> = ({
-    links,
-    isMobile,
-}) => {
+  links,
+  isMobile,
+}) => (
+  <NavbarWrapper>
+    {!isMobile
+                && <MenuList depthLevel={0} links={links} />}
+  </NavbarWrapper>
+);
 
-    return (
-        <NavbarWrapper>
-            {!isMobile
-                && <MenuList depthLevel={0} links={links} />
-            }
-        </NavbarWrapper>
-    )
-}
-
-export default Navbar
+export default Navbar;

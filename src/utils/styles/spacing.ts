@@ -6,6 +6,6 @@ export const SPACING = {
   md: '.875rem',
   lg: '1rem',
   xl: '2rem',
-  "2xl": '4rem',
-  "3xl": '8rem',
+  '2xl': '4rem',
+  '3xl': '8rem',
 };

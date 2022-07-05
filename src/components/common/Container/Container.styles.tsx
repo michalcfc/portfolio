@@ -1,18 +1,18 @@
 import styled from 'styled-components';
-import { mapToTheme as theme } from "styled-map"
+import { mapToTheme as theme } from 'styled-map';
 import { space, compose } from 'styled-system';
-import { Sizes } from "~utils/styles/types";
+import { Sizes } from '~utils/styles/types';
 
 const widgetProps = compose(
   space,
 );
 
 type CustomProps = {
-    maxWidth?: Sizes
+  maxWidth?: Sizes
 };
 
 // Helper function to convert pixels to rems (remy)
-const remy = px => `${px / 16}rem`
+const remy = (px) => `${px / 16}rem`;
 
 export const ContainerStyles = styled.div<CustomProps>`
     ${widgetProps};

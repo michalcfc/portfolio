@@ -1,34 +1,33 @@
 import React from 'react';
 
 import {
-    TabWrapper
-} from "./Tab.styles";
+  TabWrapper,
+} from './Tab.styles';
 
 import {
-  TabD
+  TabD,
 } from './Tab.d';
 
 // components
-import { Button } from "~components/common/Button";
+import { Button } from '~components/common/Button';
 
 const Tab: React.FC<TabD> = ({
-    title,
-    onSelect,
-    isSelected,
- }) => {
-
-    return (
-        <TabWrapper
-            selectedTab={isSelected ?? false}
-            onClick={onSelect}
-        >
-            {onSelect && <Button
-                name={title}
-                variant={'text'}
-                onClick={onSelect}
-            />}
-        </TabWrapper>
-    )
-}
+  title,
+  onSelect,
+  isSelected,
+}) => (
+  <TabWrapper
+    selectedTab={isSelected ?? false}
+    onClick={onSelect}
+  >
+    {onSelect && (
+    <Button
+      name={title}
+      variant="text"
+      onClick={onSelect}
+    />
+    )}
+  </TabWrapper>
+);
 
 export default Tab;

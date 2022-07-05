@@ -48,7 +48,7 @@ const ProjectsPage = ({ projects }: ProjectsPageD) => (
           mt={SPACING.md}
           fontSize={FONT_SIZES.lg}
           text={'Morbi risus elit, fringilla in cursus a, molestie non dui. '
-                    + 'Nunc accumsan gravida risus, ac semper libero mollis ut.'}
+                    + 'Nunc accumsan gravida risus, semper libero mollis ut.'}
         />
       </Box>
     </Box>

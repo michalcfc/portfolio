@@ -45,6 +45,7 @@
     "@types/react": "^17.0.1",
     "@types/styled-components": "^5.1.7",
     "@types/styled-system": "^5.1.11",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-preset-airbnb": "^5.0.0",
     "eslint-config-airbnb": "^19.0.4",

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { PricingSectionD } from "./ToolSection.d"
+import { PricingSectionD } from "./PricingSection.d"
 
 // components
 import { Section } from "./../Section";

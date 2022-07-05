@@ -43,7 +43,7 @@ const ProjectsPage = ({ projects }: ProjectsPageD) => (
       <Box maxWidth={SIZES.lg}>
         <Heading type="h2" title="My Projects" />
         <Text
-          muted
+          isMuted
           as="p"
           mt={SPACING.md}
           fontSize={FONT_SIZES.lg}

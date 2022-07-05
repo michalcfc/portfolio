@@ -28,5 +28,5 @@ const textStyledSystem = compose(
 
 export const TextStyles = styled.span<TextProps>`
   ${textStyledSystem};
-  color: ${({ theme, muted }) => muted && theme.colors.gray};
+  color: ${({ theme, isMuted }) => isMuted && theme.colors.gray};
 `;

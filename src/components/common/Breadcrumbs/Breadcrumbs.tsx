@@ -10,7 +10,7 @@ import { Text } from '~components/common/Text';
 const Breadcrumbs: React.FC<BreadcrumbsD> = () => (
   <BreadcrumbsWrapper>
     <Box my={2}>
-      <Text muted text="Home > Books > First Snow" />
+      <Text isMuted text="Home > Books > First Snow" />
     </Box>
   </BreadcrumbsWrapper>
 );

@@ -14,11 +14,11 @@ const Tabs: React.FC<TabsD> = ({
 }) => {
   const [selectedTab, setSelectedTab] = useState<TabIndex>(null);
 
-  const value = useMemo(() => ({ selectedTab, setSelectedTab }), []);
+  const values = useMemo(() => ({ selectedTab, setSelectedTab }), [selectedTab]);
 
   return (
     <TabsContext.Provider
-      value={value}
+      value={values}
     >
       {children}
     </TabsContext.Provider>

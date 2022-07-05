@@ -94,7 +94,7 @@ const FeaturesSection: React.FC<FeaturesSectionD> = () => {
                 title={feature.name}
               />
               <Text
-                muted
+                isMuted
                 text="Aenean quam ornare. Curabitur blandit."
               />
             </div>

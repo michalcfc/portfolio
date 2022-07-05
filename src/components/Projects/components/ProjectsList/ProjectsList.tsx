@@ -28,6 +28,7 @@ const ProjectsList: React.FC<ProjectsListD> = ({
     >
       {projects.map((project) => (
         <ProjectPreview
+          key={project.name}
           img={project.img}
           name={project.name}
         />
@@ -55,7 +56,7 @@ const ProjectsList: React.FC<ProjectsListD> = ({
           {renderAllProjects}
         </TabPanel>
         {projects.map((project) => (
-          <TabPanel>
+          <TabPanel key={project.name}>
             {renderProjectsByCategory(project)}
           </TabPanel>
         ))}

@@ -81,7 +81,6 @@ export function getAllPostsTags(fields: string[] = ['tags']) {
   const flatArrays = tags.map((a) => (a.tags)).flat();
   // eslint-disable-next-line no-return-assign
   flatArrays.forEach((x, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
-
   return result;
 }
 

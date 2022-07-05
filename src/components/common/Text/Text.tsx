@@ -5,12 +5,12 @@ import { TextStyles } from './Text.styles';
 
 const Text: React.FC<TextProps> = ({
   text,
-  muted,
+  isMuted,
   children,
   ...rest
 }) => (
   <TextStyles
-    muted={muted}
+    isMuted={isMuted}
     {...rest}
   >
     {text || children}

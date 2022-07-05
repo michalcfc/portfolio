@@ -39,7 +39,7 @@ const Section: React.FC<SectionD> = ({
                       flexDirection="column"
                     >
                       <Heading type="h2" title={title ?? ''} />
-                      <Text muted fontSize={FONT_SIZES.md} text={subtitle ?? ''} />
+                      <Text isMuted fontSize={FONT_SIZES.md} text={subtitle ?? ''} />
                     </Box>
                     )}
       </FlexBox>

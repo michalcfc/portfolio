@@ -27,7 +27,7 @@ const Jumbotron: React.FC<JumbotronD> = ({
     {subtitle
             && (
             <Text
-              muted
+              isMuted
               text={subtitle}
             />
             )}

@@ -19,14 +19,14 @@ const Tab: React.FC<TabD> = ({
 
     return (
         <TabWrapper
-            selectedTab={isSelected}
+            selectedTab={isSelected ?? false}
             onClick={onSelect}
         >
-            <Button
+            {onSelect && <Button
                 name={title}
                 variant={'text'}
                 onClick={onSelect}
-            />
+            />}
         </TabWrapper>
     )
 }

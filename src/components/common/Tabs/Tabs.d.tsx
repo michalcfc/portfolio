@@ -1,3 +1,3 @@
 export interface TabsD {
-  isSelectedTab: number
+  isSelectedTab?: number
 }

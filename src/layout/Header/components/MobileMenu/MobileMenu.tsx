@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 import { motion, useCycle } from 'framer-motion';
 import { MobileMenuD } from './MobileMenu.d';

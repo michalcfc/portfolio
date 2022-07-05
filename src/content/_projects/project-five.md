@@ -1,5 +1,5 @@
 ---
-name: 'Project Six'
+name: 'Project Five'
 excerpt: ''
 img: '/img/projects/project_five.jpg'
 details:

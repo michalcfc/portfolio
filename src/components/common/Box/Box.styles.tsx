@@ -1,6 +1,7 @@
 import styled, { CSSProperties } from 'styled-components';
 
 import {
+  grid,
   space,
   system,
   layout,
@@ -17,7 +18,7 @@ import {
   FlexboxProps,
   PositionProps,
   BoxShadowProps,
-  BackgroundProps, grid,
+  BackgroundProps,
 } from 'styled-system';
 
 export type BoxProps = BackgroundProps &

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { mapToTheme as theme } from 'styled-map';
 import {
-<<<<<<< HEAD
   color,
   space,
   layout,
@@ -13,19 +12,6 @@ import {
   typography,
   buttonStyle,
   borderRadius,
-=======
-    color,
-    space,
-    layout,
-    compose,
-    variant,
-    fontSize,
-    position,
-    fontWeight,
-    typography,
-    buttonStyle,
-    borderRadius,
->>>>>>> 4d30df1... init project
 } from 'styled-system';
 import { ButtonD } from './Button.d';
 
@@ -35,7 +21,6 @@ const buttonSize = variant({
 });
 
 const buttonStyledSystem = compose(
-<<<<<<< HEAD
   color,
   space,
   layout,
@@ -46,18 +31,6 @@ const buttonStyledSystem = compose(
   typography,
   buttonStyle,
   borderRadius,
-=======
-    color,
-    space,
-    layout,
-    fontSize,
-    fontWeight,
-    position,
-    buttonSize,
-    typography,
-    buttonStyle,
-    borderRadius,
->>>>>>> 4d30df1... init project
 );
 
 export const ButtonWrapper = styled.button<ButtonD>`       

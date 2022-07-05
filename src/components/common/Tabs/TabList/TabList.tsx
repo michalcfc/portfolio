@@ -1,7 +1,7 @@
 import React, {
   Children, cloneElement, ReactNode, useContext,
 } from 'react';
-import { TabsContext } from '@components/common/Tabs/Tabs';
+import { TabsContext } from '~components/common/Tabs/Tabs';
 
 import {
   TabListWrapper,

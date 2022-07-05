@@ -1,5 +1,5 @@
-import { FormError } from '@components/common/Form/FormError';
 import React from 'react';
+import { FormError } from '~components/common/Form/FormError';
 import { SelectD } from './Select.d';
 import {
   Label,

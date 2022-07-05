@@ -1,6 +1,6 @@
 import React, { Children, useContext } from 'react';
 
-import { TabsContext } from '@components/common/Tabs/Tabs';
+import { TabsContext } from '~components/common/Tabs/Tabs';
 import {
   TapPanelsWrapper,
 } from './TabPanels.styles';

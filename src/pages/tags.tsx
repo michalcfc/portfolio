@@ -1,10 +1,9 @@
-import Jumbotron from '@components/Jumbotron';
+import { Jumbotron } from '~components/common/Jumbotron';
 
 const Tags = () => (
   <>
     <Jumbotron
       title="Tags"
-      description=""
     />
   </>
 );

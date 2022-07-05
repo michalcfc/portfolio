@@ -14,9 +14,22 @@ const Jumbotron: React.FC<JumbotronD> = ({
     title,
     subtitle
  }) =>  (
-    <Box textAlign={'center'} background={COLORS.gray300} py={SPACING["2xl"]}>
-        <Heading type={'h2'} title={title} color={COLORS.white} />
-        <Text muted text={subtitle} />
+    <Box
+        textAlign={'center'}
+        background={COLORS.gray300}
+        py={SPACING["2xl"]}
+    >
+        <Heading
+            type={'h2'}
+            title={title}
+            color={COLORS.white}
+        />
+        {subtitle
+            && <Text
+                muted
+                text={subtitle}
+            />
+        }
     </Box>
 )
 

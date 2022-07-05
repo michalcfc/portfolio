@@ -22,7 +22,7 @@ export const getUniqueProjects = (projects: Project[]) => {
 export const setProjectsList = (categories: ProjectCategory[], project: ProjectCategory | any) => {
   const projects: Project[] = [];
 
-  for (let i = 0; i < categories.length; i++) {
+  for (let i = 0; i < categories.length; i += 1) {
     const projectCategories = project.categories
       .map((categoryName: ProjectCategory) => categoryName
         .toLowerCase());

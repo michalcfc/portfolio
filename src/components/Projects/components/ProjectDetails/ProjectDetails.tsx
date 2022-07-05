@@ -19,8 +19,9 @@ const ProjectDetails: React.FC<ProjectDetailsD> = ({
   return (
     <>
       <Heading type="h4" title={name} />
-      {details.map((detail, id) => (
+      {details.map((detail) => (
         <FlexBox
+          key={detail.id}
           py={SPACING.md}
           borderBottom={`1px solid ${COLORS.gray}`}
           justifyContent="space-between"

@@ -6,9 +6,7 @@ import { ProjectActionsD } from './ProjectActions.d';
 import { Box } from '~components/common/Box';
 import { Link } from '~components/common/Link';
 
-const ProjectActions: React.FC<ProjectActionsD> = ({
-
-}) => (
+const ProjectActions: React.FC<ProjectActionsD> = () => (
   <Box mt={3}>
     <Link
       mb={2}

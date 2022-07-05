@@ -6,7 +6,6 @@ import {
 } from './Navbar.styles';
 
 import { MenuList } from '../MenuList';
-import { MobileMenu } from '~layout/Header/components/MobileMenu';
 
 const Navbar: React.FC<NavbarD> = ({
   links,

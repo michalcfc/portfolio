@@ -32,7 +32,6 @@ const MobileMenu: React.FC<MobileMenuD> = () => {
     },
   };
 
-  const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false);
   return (
     <>
       <motion.nav

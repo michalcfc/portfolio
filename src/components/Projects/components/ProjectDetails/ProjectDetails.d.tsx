@@ -1,4 +1,5 @@
 type Detail = {
+  id: number
   client: string
   date: string
 };

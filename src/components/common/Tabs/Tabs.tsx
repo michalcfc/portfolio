@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { TabsD } from './Tabs.d';
 
@@ -14,12 +14,11 @@ const Tabs: React.FC<TabsD> = ({
 }) => {
   const [selectedTab, setSelectedTab] = useState<TabIndex>(null);
 
+  const value = useMemo(() => ({ selectedTab, setSelectedTab }), []);
+
   return (
     <TabsContext.Provider
-      value={{
-        selectedTab,
-        setSelectedTab,
-      }}
+      value={value}
     >
       {children}
     </TabsContext.Provider>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '~components/common/Button';
+import { MenuToggleD } from './MenuToggle.d';
 
 const Path = (props) => (
   <motion.path
@@ -12,7 +13,7 @@ const Path = (props) => (
   />
 );
 
-const MenuToggle = ({ toggle }) => (
+const MenuToggle = ({ toggle }: MenuToggleD) => (
   <Button variant="ghost" style={{ position: 'absolute', right: '15px', top: '18px' }} onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path

@@ -1,3 +1,1 @@
-export interface ProjectActionsD {
-
-}
+export interface ProjectActionsD {}

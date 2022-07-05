@@ -67,9 +67,9 @@ const FeaturesSection: React.FC<FeaturesSectionD> = () => {
         gridGap={SPACING.lg}
         gridTemplateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)']}
       >
-        {features.map((feature, id) => (
+        {features.map((feature) => (
           <FlexBox
-            key={id}
+            key={feature.id}
             p={SPACING.lg}
             borderRadius={BORDER_RADIUS.base}
             border={`1px solid ${COLORS.gray}`}

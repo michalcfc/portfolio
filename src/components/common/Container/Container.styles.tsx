@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mapToTheme as theme } from 'styled-map';
 import { space, compose } from 'styled-system';
 import { Sizes } from '~utils/styles/types';
 

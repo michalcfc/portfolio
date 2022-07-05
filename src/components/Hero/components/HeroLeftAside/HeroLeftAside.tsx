@@ -50,6 +50,7 @@ const HeroLeftAside: React.FC<HeroLeftAsideD> = ({
       />
       <HeroActionButtons
         primary_cta={primary_cta}
+        secondary_cta={secondary_cta}
       />
       <Img
         width={45}

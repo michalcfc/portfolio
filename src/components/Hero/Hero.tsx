@@ -30,11 +30,11 @@ const Hero: React.FC<HeroD> = ({
           secondary_cta={secondary_cta ?? undefined}
         />
         {img
-                         && (
-                         <HeroRightAside
-                           img={img}
-                         />
-                         )}
+           && (
+             <HeroRightAside
+               img={img}
+             />
+           )}
       </HeroContent>
     </Container>
   </HeroWrapper>

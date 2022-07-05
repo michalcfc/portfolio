@@ -78,7 +78,8 @@ export function getAllPostsTags(fields: string[] = ['tags']) {
   const slugs = getSlugsFromDirectory(postsDirectory);
   const tags = slugs.map((slug) => getBySlug(postsDirectory, slug, fields));
   const flatArrays = tags.map((a) => (a.tags)).flat();
-  flatArrays.forEach((_, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
+  flatArrays.forEach((x, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
+
   return result;
 }
 

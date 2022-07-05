@@ -19,11 +19,7 @@ import {
 } from "~components/Sections";
 
 
-const Home: React.FC<HomePageD> = ({ homePage }) => {
-
-  const {
-    hobbies
-  } = homePage
+const Home: React.FC<HomePageD> = () => {
 
   return (
     <>

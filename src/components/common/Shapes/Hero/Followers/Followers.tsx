@@ -36,9 +36,10 @@ const Followers: React.FC<FollowersD> = () => (
         boxShadow={BOX_SHADOWS.lg}
         borderRadius={BORDER_RADIUS.md}
     >
-      <Text fontSize={FONT_SIZES.md}>
-        More than 21,500+ students enrolled around the world
-      </Text>
+      <Text
+          fontSize={FONT_SIZES.md}
+          text={'More than 21,500+ students enrolled around the world'}
+      />
     </Box>
     </motion.div>
 );

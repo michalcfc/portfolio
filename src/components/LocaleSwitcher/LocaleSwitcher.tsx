@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Link } from '~components/common/Link';
 
 const LocaleSwitcher = () => {
   const router = useRouter();
@@ -14,9 +14,11 @@ const LocaleSwitcher = () => {
           const { pathname, query } = router;
           return (
             <li key={locale}>
-              <Link href={{ pathname, query }} locale={locale}>
-                <a>{locale}</a>
-              </Link>
+              <Link
+                name={locale}
+                locale={locale}
+                href={{ pathname, query }}
+              />
             </li>
           );
         })}

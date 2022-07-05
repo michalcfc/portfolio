@@ -69,6 +69,7 @@ export function getAllPostsCategories(fields: string[] = ['categories']) {
   const slugs = getSlugsFromDirectory(postsDirectory);
   const categories = slugs.map((slug) => getBySlug(postsDirectory, slug, fields));
   const flatArrays = categories.map((a) => a.categories).flat();
+  // eslint-disable-next-line no-return-assign
   flatArrays.forEach((x, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
   return result;
 }
@@ -78,6 +79,7 @@ export function getAllPostsTags(fields: string[] = ['tags']) {
   const slugs = getSlugsFromDirectory(postsDirectory);
   const tags = slugs.map((slug) => getBySlug(postsDirectory, slug, fields));
   const flatArrays = tags.map((a) => (a.tags)).flat();
+  // eslint-disable-next-line no-return-assign
   flatArrays.forEach((x, i) => [{ [i]: result[i] = (result[i] || 0) + 1 }]);
 
   return result;
